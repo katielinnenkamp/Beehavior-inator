@@ -5,25 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Super Serious Professional Website</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="login-page.js"></script>
 </head>
 
 <body>
   <main class="home-container">
+    <!-- note to self, username is admin ;) -->
     <h1>Very Important Data Inside. Please don't hack!</h1>
     <p class="subtitle">Please Login.</p>
 
-    <form class="login-form" action="#" method="post">
-      <label for="login">Email or Username</label>
+    <form class="login-form" id="login" action="#" method="post">
+      <label for="username">Email or Username</label>
       <input
-        id="login"
+        id="username"
         name="login"
         type="text"
         placeholder="yourname@ex.com"
         autocomplete="username"
         required
       />
-
-      <button type="submit">Login</button>
+      <button type="submit" id="login-button">Login</button>
     </form>
   </main>
 </body>
