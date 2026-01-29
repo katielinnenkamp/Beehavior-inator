@@ -61,4 +61,48 @@ button {
   font-weight: 600;
 }
 
+.sub-submit {
+  margin:6px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.dashboard {
+  min-height: 10vh;
+}
+
+.dashboard-content {
+  max-width: 600px;
+  margin: 80px auto 0;
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.error {
+  color: #f87171;
+  font-size: 0.9rem;
+  margin-top: -4px;
+}
+
+.hidden {
+  display: none;
+}
+
 a {color: #93c5fd; }
