@@ -14,17 +14,32 @@
     <h1>Very Important Data Inside. Please don't hack!</h1>
     <p class="subtitle">Please Login.</p>
 
-    <form class="login-form" id="login" action="#" method="post">
-      <label for="username">Email or Username</label>
+    <form class="login-form" action="standin.html" method="post">
+      <label for="login">Email or Username</label>
       <input
         id="username"
         name="login"
         type="text"
-        placeholder="yourname@ex.com"
+        placeholder="yourname@ex.com or yourname"
         autocomplete="username"
         required
       />
-      <button type="submit" id="login-button">Login</button>
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="••••••••••••"
+        autocomplete="password"
+        required
+      />
+
+      <button type="submit">Login</button>
+
+      <p class="sub-submit">
+        New user? <a href="createacc.html">Create an account</a>
+      </p>
     </form>
   </main>
 </body>
