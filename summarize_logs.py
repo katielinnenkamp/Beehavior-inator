@@ -1,17 +1,34 @@
 #!/usr/bin/env python3
 import json
 import re
-import sys
 from pathlib import Path
 
-# Matches the header line:
+# --- Absolute paths based on script location  ---
+BASE_DIR = Path(__file__).resolve().parent
+LOG_FILE = BASE_DIR / "logs" / "server-https-8443.log"
+PARSED_DIR = BASE_DIR / "parsed"
+OFFSET_FILE = PARSED_DIR / ".offset"
+CARRY_FILE = PARSED_DIR / ".carry"
+OUTPUT_FILE = PARSED_DIR / "summary.jsonl"
+
 # 2026-02-09T09:24:46.600308 - From 127.0.0.1:49198:
 RE_ENTRY = re.compile(
     r"^(?P<ts>\d{4}-\d{2}-\d{2}T[0-9:.]+)\s+-\s+From\s+(?P<ip>[\d.]+):(?P<port>\d+):\s*$"
 )
-
-# Matches request line: GET /path HTTP/1.1
+# GET /path HTTP/1.1
 RE_REQ = re.compile(r"^(?P<meth>[A-Z]+)\s+(?P<path>\S+)\s+HTTP/\d\.\d\s*$")
+
+def load_offset() -> int:
+    try:
+        if not OFFSET_FILE.exists():
+            return 0
+        s = OFFSET_FILE.read_text(encoding="utf-8", errors="ignore").strip()
+        return int(s) if s else 0
+    except Exception:
+        return 0
+
+def save_offset(offset: int) -> None:
+    OFFSET_FILE.write_text(str(offset), encoding="utf-8")
 
 def parse_log(text: str):
     lines = text.splitlines()
@@ -66,11 +83,11 @@ def parse_log(text: str):
                         pass
             i += 1
 
-        # Skip blank line
+        # Skip blank lines
         while i < len(lines) and lines[i].strip() == "":
             i += 1
 
-        # Skip the "Sent:"
+        # Skip the "Sent:" blob until next entry
         if i < len(lines) and lines[i].strip().lower() == "sent:":
             i += 1
             while i < len(lines) and not RE_ENTRY.match(lines[i].strip()):
@@ -79,37 +96,61 @@ def parse_log(text: str):
         yield evt
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python3 summarize_logs.py <logfile_or_logs_dir> [out.jsonl]")
-        sys.exit(1)
+    PARSED_DIR.mkdir(parents=True, exist_ok=True)
 
-    inp = Path(sys.argv[1])
-    out = Path(sys.argv[2]) if len(sys.argv) > 2 else Path("events.jsonl")
+    if not LOG_FILE.exists():
+        print(f"[parser] Log file not found: {LOG_FILE}")
+        return
 
-    # Gather log files
-    files = []
-    if inp.is_dir():
-        files = sorted([p for p in inp.rglob("*") if p.is_file()])
-    else:
-        files = [inp]
+    last_offset = load_offset()
 
-    events = []
-    for f in files:
+    # Read new bytes using byte offsets 
+    with LOG_FILE.open("rb") as f:
+        f.seek(last_offset)
+        new_bytes = f.read()
+        end_pos = f.tell()
+
+    if not new_bytes:
+        # nothing new
+        return
+
+    carry_bytes = b""
+    if CARRY_FILE.exists():
         try:
-            text = f.read_text(encoding="utf-8", errors="ignore")
+            carry_bytes = CARRY_FILE.read_bytes()
         except Exception:
-            continue
-        for evt in parse_log(text):
-            # drop empty placeholders
-            if evt["method"] and evt["path"]:
-                events.append(evt)
+            carry_bytes = b""
 
-    # Write JSONL
-    with out.open("w", encoding="utf-8") as w:
-        for evt in events:
+    combined = carry_bytes + new_bytes
+
+    last_nl = combined.rfind(b"\n")
+    if last_nl == -1:
+        CARRY_FILE.write_bytes(combined)
+        return
+
+    parse_bytes = combined[: last_nl + 1]
+    remainder = combined[last_nl + 1 :]
+    CARRY_FILE.write_bytes(remainder)
+
+    text = parse_bytes.decode("utf-8", errors="ignore")
+
+    new_events = []
+    for evt in parse_log(text):
+        if evt["method"] and evt["path"]:
+            new_events.append(evt)
+
+    # Advance offset by the number of bytes we consumed from *new_bytes*
+    consumed_from_new = max(0, len(parse_bytes) - len(carry_bytes))
+    save_offset(last_offset + consumed_from_new)
+
+    if not new_events:
+        return
+
+    with OUTPUT_FILE.open("a", encoding="utf-8") as w:
+        for evt in new_events:
             w.write(json.dumps(evt) + "\n")
 
-    print(f"Wrote {len(events)} events to {out}")
+    print(f"[parser] appended {len(new_events)} events to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
