@@ -1,0 +1,498 @@
+
+2026-02-09T09:24:46.600308 - From 127.0.0.1:49198: 
+GET / HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Super Serious Professional Website</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n\n<body>\n  <main class="home-container">\n    <h1>Very Important Data Inside. Please don\'t hack!</h1>\n    <p class="subtitle">Please Login.</p>\n\n    <form class="login-form" action="/login" method="post">\n      <label for="login">Email or Username</label>\n      <input\n        id="login"\n        name="login"\n        type="text"\n        placeholder="yourname@ex.com or yourname"\n        autocomplete="username"\n        required\n      />\n\n      <label for="password">Password</label>\n      <input\n        id="password"\n        name="password"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        autocomplete="password"\n        required\n      />\n\n      <button type="submit">Login</button>\n\n      <p class="sub-submit">\n        New user? <a href="createacc.html">Create an account</a>\n      </p>\n    </form>\n  </main>\n</body>\n</html>'
+
+2026-02-09T09:24:46.648990 - From 127.0.0.1:49203: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:25:00.880454 - From 127.0.0.1:49213: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'from servers.ApacheServer import ApacheServer\nfrom urllib.parse import parse_qs\nimport os\nimport hashlib\n\nSITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")\n\ndef read_file(name: str) -> str:\n    with open(os.path.join(SITE_DIR, name), "r", encoding="utf-8", errors="ignore") as f:\n        return f.read()\n\ndef hash_pw(pw: str) -> str:\n    # Don\xe2\x80\x99t store raw passwords\xe2\x80\x94store a short hash for analysis\n    return hashlib.sha256(pw.encode("utf-8", errors="ignore")).hexdigest()[:16]\n\nclass LoginSiteServer(ApacheServer):\n    def on_request(self, handler):\n        return None, None\n\n    def on_GET(self, path, headers):\n        # Normalize\n        if path == "/":\n            body = read_file("index.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/createacc.html":\n            body = read_file("createacc.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/standin.html":\n            body = read_file("standin.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/style.css":\n            body = read_file("style.css")\n            return 200, [("Content-Type", "text/css; charset=utf-8")], body\n\n        if path == "/favicon.ico":\n            return 204, [], ""  # no content, avoids noisy 404s\n\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_POST(self, path, headers, post_data):\n        # post_data is raw form bytes/string; we parse it as x-www-form-urlencoded\n        raw = post_data.decode("utf-8", errors="ignore") if isinstance(post_data, (bytes, bytearray)) else str(post_data)\n        fields = parse_qs(raw)\n\n        extra = {"form_path": path}\n\n        if path == "/login":\n            user = (fields.get("username") or fields.get("login") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["login_user"] = user\n            extra["login_pw_hash"] = hash_pw(pw)\n            extra["login_pw_len"] = len(pw)\n\n            # Always \xe2\x80\x9cfail\xe2\x80\x9d or always \xe2\x80\x9csuccess\xe2\x80\x9d \xe2\x80\x94 up to you.\n            # For a demo, returning standin.html is nice:\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/create":\n            username = (fields.get("username") or [""])[0]\n            email = (fields.get("email") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["create_user"] = username\n            extra["create_email"] = email\n            extra["create_pw_hash"] = hash_pw(pw)\n            extra["create_pw_len"] = len(pw)\n\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        self._last_extra = {"form_path": path, "note": "unknown_post"}\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_error(self, code, headers, message):\n        return code, [("Connection", "close"), ("Content-Type", "text/html; charset=utf-8")], message\n\n    def on_complete(self, client, code, req_headers, res_headers, request, response):\n        # Attach extra info from the last POST handler call if present\n        extra = getattr(self, "_last_extra", {})\n        self._last_extra = {}\n        self.log(client, request, response, extra)\n\n    def default_headers(self):\n        return []\n'
+
+2026-02-09T09:25:08.805247 - From 127.0.0.1:49222: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'from servers.ApacheServer import ApacheServer\nfrom urllib.parse import parse_qs\nimport os\nimport hashlib\n\nSITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")\n\ndef read_file(name: str) -> str:\n    with open(os.path.join(SITE_DIR, name), "r", encoding="utf-8", errors="ignore") as f:\n        return f.read()\n\ndef hash_pw(pw: str) -> str:\n    # Don\xe2\x80\x99t store raw passwords\xe2\x80\x94store a short hash for analysis\n    return hashlib.sha256(pw.encode("utf-8", errors="ignore")).hexdigest()[:16]\n\nclass LoginSiteServer(ApacheServer):\n    def on_request(self, handler):\n        return None, None\n\n    def on_GET(self, path, headers):\n        # Normalize\n        if path == "/":\n            body = read_file("index.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/createacc.html":\n            body = read_file("createacc.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/standin.html":\n            body = read_file("standin.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/style.css":\n            body = read_file("style.css")\n            return 200, [("Content-Type", "text/css; charset=utf-8")], body\n\n        if path == "/favicon.ico":\n            return 204, [], ""  # no content, avoids noisy 404s\n\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_POST(self, path, headers, post_data):\n        # post_data is raw form bytes/string; we parse it as x-www-form-urlencoded\n        raw = post_data.decode("utf-8", errors="ignore") if isinstance(post_data, (bytes, bytearray)) else str(post_data)\n        fields = parse_qs(raw)\n\n        extra = {"form_path": path}\n\n        if path == "/login":\n            user = (fields.get("username") or fields.get("login") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["login_user"] = user\n            extra["login_pw_hash"] = hash_pw(pw)\n            extra["login_pw_len"] = len(pw)\n\n            # Always \xe2\x80\x9cfail\xe2\x80\x9d or always \xe2\x80\x9csuccess\xe2\x80\x9d \xe2\x80\x94 up to you.\n            # For a demo, returning standin.html is nice:\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/create":\n            username = (fields.get("username") or [""])[0]\n            email = (fields.get("email") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["create_user"] = username\n            extra["create_email"] = email\n            extra["create_pw_hash"] = hash_pw(pw)\n            extra["create_pw_len"] = len(pw)\n\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        self._last_extra = {"form_path": path, "note": "unknown_post"}\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_error(self, code, headers, message):\n        return code, [("Connection", "close"), ("Content-Type", "text/html; charset=utf-8")], message\n\n    def on_complete(self, client, code, req_headers, res_headers, request, response):\n        # Attach extra info from the last POST handler call if present\n        extra = getattr(self, "_last_extra", {})\n        self._last_extra = {}\n        self.log(client, request, response, extra)\n\n    def default_headers(self):\n        return []\n'
+
+2026-02-09T09:25:16.386192 - From 127.0.0.1:49230: 
+POST /login HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Content-Length: 44
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: https://localhost:8443
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8" />\n  <title>Standin Dashboard</title>\n  <link rel="stylesheet" href="style.css" />\n</head>\n\n<body class="dashboard">\n  <a href="index.html" class="back-button top-left">X</a>\n\n  <main class="dashboard-content">\n    <h1>Get Trolled Lol</h1>\n    <p>Ur actually so dumb lmao</p>\n  </main>\n</body>\n</html>'
+
+2026-02-09T09:25:16.410607 - From 127.0.0.1:49235: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/login
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:26:49.043732 - From 127.0.0.1:49267: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'from servers.ApacheServer import ApacheServer\nfrom urllib.parse import parse_qs\nimport os\nimport hashlib\n\nSITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")\n\ndef read_file(name: str) -> str:\n    with open(os.path.join(SITE_DIR, name), "r", encoding="utf-8", errors="ignore") as f:\n        return f.read()\n\ndef hash_pw(pw: str) -> str:\n    # Don\xe2\x80\x99t store raw passwords\xe2\x80\x94store a short hash for analysis\n    return hashlib.sha256(pw.encode("utf-8", errors="ignore")).hexdigest()[:16]\n\nclass LoginSiteServer(ApacheServer):\n    def on_request(self, handler):\n        return None, None\n\n    def on_GET(self, path, headers):\n        # Normalize\n        if path == "/":\n            body = read_file("index.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/createacc.html":\n            body = read_file("createacc.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/standin.html":\n            body = read_file("standin.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/style.css":\n            body = read_file("style.css")\n            return 200, [("Content-Type", "text/css; charset=utf-8")], body\n\n        if path == "/favicon.ico":\n            return 204, [], ""  # no content, avoids noisy 404s\n\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_POST(self, path, headers, post_data):\n        # post_data is raw form bytes/string; we parse it as x-www-form-urlencoded\n        raw = post_data.decode("utf-8", errors="ignore") if isinstance(post_data, (bytes, bytearray)) else str(post_data)\n        fields = parse_qs(raw)\n\n        extra = {"form_path": path}\n\n        if path == "/login":\n            user = (fields.get("username") or fields.get("login") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["login_user"] = user\n            extra["login_pw_hash"] = hash_pw(pw)\n            extra["login_pw_len"] = len(pw)\n\n            # Always \xe2\x80\x9cfail\xe2\x80\x9d or always \xe2\x80\x9csuccess\xe2\x80\x9d \xe2\x80\x94 up to you.\n            # For a demo, returning standin.html is nice:\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/create":\n            username = (fields.get("username") or [""])[0]\n            email = (fields.get("email") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["create_user"] = username\n            extra["create_email"] = email\n            extra["create_pw_hash"] = hash_pw(pw)\n            extra["create_pw_len"] = len(pw)\n\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        self._last_extra = {"form_path": path, "note": "unknown_post"}\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_error(self, code, headers, message):\n        return code, [("Connection", "close"), ("Content-Type", "text/html; charset=utf-8")], message\n\n    def on_complete(self, client, code, req_headers, res_headers, request, response):\n        # Attach extra info from the last POST handler call if present\n        extra = getattr(self, "_last_extra", {})\n        self._last_extra = {}\n        self.log(client, request, response, extra)\n\n    def default_headers(self):\n        return []\n'
+
+2026-02-09T09:29:14.255115 - From 127.0.0.1:49305: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'from servers.ApacheServer import ApacheServer\nfrom urllib.parse import parse_qs\nimport os\nimport hashlib\n\nSITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")\n\ndef read_file(name: str) -> str:\n    with open(os.path.join(SITE_DIR, name), "r", encoding="utf-8", errors="ignore") as f:\n        return f.read()\n\ndef hash_pw(pw: str) -> str:\n    # Don\xe2\x80\x99t store raw passwords\xe2\x80\x94store a short hash for analysis\n    return hashlib.sha256(pw.encode("utf-8", errors="ignore")).hexdigest()[:16]\n\nclass LoginSiteServer(ApacheServer):\n    def on_request(self, handler):\n        return None, None\n\n    def on_GET(self, path, headers):\n        # Normalize\n        if path == "/":\n            body = read_file("index.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/createacc.html":\n            body = read_file("createacc.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/standin.html":\n            body = read_file("standin.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/style.css":\n            body = read_file("style.css")\n            return 200, [("Content-Type", "text/css; charset=utf-8")], body\n\n        if path == "/favicon.ico":\n            return 204, [], ""  # no content, avoids noisy 404s\n\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_POST(self, path, headers, post_data):\n        # post_data is raw form bytes/string; we parse it as x-www-form-urlencoded\n        raw = post_data.decode("utf-8", errors="ignore") if isinstance(post_data, (bytes, bytearray)) else str(post_data)\n        fields = parse_qs(raw)\n\n        extra = {"form_path": path}\n\n        if path == "/login":\n            user = (fields.get("username") or fields.get("login") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["login_user"] = user\n            extra["login_pw_hash"] = hash_pw(pw)\n            extra["login_pw_len"] = len(pw)\n\n            # Always \xe2\x80\x9cfail\xe2\x80\x9d or always \xe2\x80\x9csuccess\xe2\x80\x9d \xe2\x80\x94 up to you.\n            # For a demo, returning standin.html is nice:\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/create":\n            username = (fields.get("username") or [""])[0]\n            email = (fields.get("email") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["create_user"] = username\n            extra["create_email"] = email\n            extra["create_pw_hash"] = hash_pw(pw)\n            extra["create_pw_len"] = len(pw)\n\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        self._last_extra = {"form_path": path, "note": "unknown_post"}\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_error(self, code, headers, message):\n        return code, [("Connection", "close"), ("Content-Type", "text/html; charset=utf-8")], message\n\n    def on_complete(self, client, code, req_headers, res_headers, request, response):\n        # Attach extra info from the last POST handler call if present\n        extra = getattr(self, "_last_extra", {})\n        self._last_extra = {}\n        self.log(client, request, response, extra)\n\n    def default_headers(self):\n        return []\n'
+
+2026-02-09T09:29:16.778187 - From 127.0.0.1:49312: 
+GET / HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Super Serious Professional Website</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n\n<body>\n  <main class="home-container">\n    <h1>Very Important Data Inside. Please don\'t hack!</h1>\n    <p class="subtitle">Please Login.</p>\n\n    <form class="login-form" action="/login" method="post">\n      <label for="login">Email or Username</label>\n      <input\n        id="login"\n        name="login"\n        type="text"\n        placeholder="yourname@ex.com or yourname"\n        autocomplete="username"\n        required\n      />\n\n      <label for="password">Password</label>\n      <input\n        id="password"\n        name="password"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        autocomplete="password"\n        required\n      />\n\n      <button type="submit">Login</button>\n\n      <p class="sub-submit">\n        New user? <a href="/createacc.html">Create an account</a>\n      </p>\n    </form>\n  </main>\n</body>\n</html>'
+
+2026-02-09T09:29:16.806257 - From 127.0.0.1:49316: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:29:18.229469 - From 127.0.0.1:49324: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'from servers.ApacheServer import ApacheServer\nfrom urllib.parse import parse_qs\nimport os\nimport hashlib\n\nSITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")\n\ndef read_file(name: str) -> str:\n    with open(os.path.join(SITE_DIR, name), "r", encoding="utf-8", errors="ignore") as f:\n        return f.read()\n\ndef hash_pw(pw: str) -> str:\n    # Don\xe2\x80\x99t store raw passwords\xe2\x80\x94store a short hash for analysis\n    return hashlib.sha256(pw.encode("utf-8", errors="ignore")).hexdigest()[:16]\n\nclass LoginSiteServer(ApacheServer):\n    def on_request(self, handler):\n        return None, None\n\n    def on_GET(self, path, headers):\n        # Normalize\n        if path == "/":\n            body = read_file("index.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/createacc.html":\n            body = read_file("createacc.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/standin.html":\n            body = read_file("standin.html")\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/style.css":\n            body = read_file("style.css")\n            return 200, [("Content-Type", "text/css; charset=utf-8")], body\n\n        if path == "/favicon.ico":\n            return 204, [], ""  # no content, avoids noisy 404s\n\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_POST(self, path, headers, post_data):\n        # post_data is raw form bytes/string; we parse it as x-www-form-urlencoded\n        raw = post_data.decode("utf-8", errors="ignore") if isinstance(post_data, (bytes, bytearray)) else str(post_data)\n        fields = parse_qs(raw)\n\n        extra = {"form_path": path}\n\n        if path == "/login":\n            user = (fields.get("username") or fields.get("login") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["login_user"] = user\n            extra["login_pw_hash"] = hash_pw(pw)\n            extra["login_pw_len"] = len(pw)\n\n            # Always \xe2\x80\x9cfail\xe2\x80\x9d or always \xe2\x80\x9csuccess\xe2\x80\x9d \xe2\x80\x94 up to you.\n            # For a demo, returning standin.html is nice:\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        if path == "/create":\n            username = (fields.get("username") or [""])[0]\n            email = (fields.get("email") or [""])[0]\n            pw = (fields.get("password") or [""])[0]\n            extra["create_user"] = username\n            extra["create_email"] = email\n            extra["create_pw_hash"] = hash_pw(pw)\n            extra["create_pw_len"] = len(pw)\n\n            body = read_file("standin.html")\n            self._last_extra = extra\n            return 200, [("Content-Type", "text/html; charset=utf-8")], body\n\n        self._last_extra = {"form_path": path, "note": "unknown_post"}\n        return 404, [("Content-Type", "text/plain; charset=utf-8")], "Not Found"\n\n    def on_error(self, code, headers, message):\n        return code, [("Connection", "close"), ("Content-Type", "text/html; charset=utf-8")], message\n\n    def on_complete(self, client, code, req_headers, res_headers, request, response):\n        # Attach extra info from the last POST handler call if present\n        extra = getattr(self, "_last_extra", {})\n        self._last_extra = {}\n        self.log(client, request, response, extra)\n\n    def default_headers(self):\n        return []\n'
+
+2026-02-09T09:31:16.768316 - From 127.0.0.1:49351: 
+GET / HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: none
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Super Serious Professional Website</title>\n  <link rel="stylesheet" href="style.css">\n</head>\n\n<body>\n  <main class="home-container">\n    <h1>Very Important Data Inside. Please don\'t hack!</h1>\n    <p class="subtitle">Please Login.</p>\n\n    <form class="login-form" action="/login" method="post">\n      <label for="login">Email or Username</label>\n      <input\n        id="login"\n        name="login"\n        type="text"\n        placeholder="yourname@ex.com or yourname"\n        autocomplete="username"\n        required\n      />\n\n      <label for="password">Password</label>\n      <input\n        id="password"\n        name="password"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        autocomplete="password"\n        required\n      />\n\n      <button type="submit">Login</button>\n\n      <p class="sub-submit">\n        New user? <a href="/createacc.html">Create an account</a>\n      </p>\n    </form>\n  </main>\n</body>\n</html>'
+
+2026-02-09T09:31:16.802493 - From 127.0.0.1:49355: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:31:19.274702 - From 127.0.0.1:49364: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8 />\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Create an Account</title>\n  <link rel="stylesheet" href="style.css" />\n</head>\n\n<body>\n  <main class="home-container">\n    <h1>Create an Account</h1>\n    <p class="subtitle">We really want you to see all of the important data inside.</p>\n\n    <form class="login-form" id="createform" action="standin.html" method="post">\n      <label for="username">Username</label>\n      <input\n        id="username"\n        name="username"\n        type="text"\n        placeholder="yourname"\n        required\n      />\n\n      <label for="email">Email</label>\n      <input\n        id="email"\n        name="email"\n        type="text"\n        placeholder="yourname@ex.com"\n        required\n      />\n\n      <label for="password">Password</label>\n      <input\n        id="password"\n        name="password"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        required\n      />\n\n      <label for="confirm">Confirm Password</label>\n      <input\n        id="confirm"\n        name="confirm"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        required \n      />\n\n      <p id="error" class="error hidden">Passwords do not match</p>\n        \n\n      <button type="submit">Create Account</button>\n \n      <p class="sub-submit">\n        Already have an account?\n        <a href="index.html">Login</a>\n      </p>\n    </form>\n  </main>\n\n  <script>\n    const form = document.getElementById("createform");\n    const password = document.getElementById("password");\n    const confirm = document.getElementById("confirm");\n    const error = document.getElementById("error");\n\n    form.addEventListener("submit", (e) => {\n      if (password.value !== confirm.value) {\n        e.preventDefault();\n        error.classList.remove("hidden");\n      }\n    });\n  </script>\n</body>\n</html>'
+
+2026-02-09T09:31:19.305218 - From 127.0.0.1:49368: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:31:32.584961 - From 127.0.0.1:49381: 
+POST /standin.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Content-Length: 85
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: https://localhost:8443
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+
+Sent: 
+b'<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /standin.html was not found on this server.<br />\n</p>\n\n<hr>\n<address>Apache/2.4.9 (Ubuntu) Server at example.com Port 8443</address>\n</body></html>\n\n'
+
+2026-02-09T09:32:32.856645 - From 127.0.0.1:49406: 
+POST /standin.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Content-Length: 85
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: https://localhost:8443
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+
+Sent: 
+b'<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /standin.html was not found on this server.<br />\n</p>\n\n<hr>\n<address>Apache/2.4.9 (Ubuntu) Server at example.com Port 8443</address>\n</body></html>\n\n'
+
+2026-02-09T09:34:03.766468 - From 127.0.0.1:49428: 
+POST /standin.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Content-Length: 85
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Origin: https://localhost:8443
+Content-Type: application/x-www-form-urlencoded
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+
+Sent: 
+b'<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /standin.html was not found on this server.<br />\n</p>\n\n<hr>\n<address>Apache/2.4.9 (Ubuntu) Server at example.com Port 8443</address>\n</body></html>\n\n'
+
+2026-02-09T09:34:08.133011 - From 127.0.0.1:49436: 
+GET /createacc.html HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8 />\n  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\n  <title>Create an Account</title>\n  <link rel="stylesheet" href="style.css" />\n</head>\n\n<body>\n  <main class="home-container">\n    <h1>Create an Account</h1>\n    <p class="subtitle">We really want you to see all of the important data inside.</p>\n\n    <form class="login-form" id="createform" action="/create" method="post">\n      <label for="username">Username</label>\n      <input\n        id="username"\n        name="username"\n        type="text"\n        placeholder="yourname"\n        required\n      />\n\n      <label for="email">Email</label>\n      <input\n        id="email"\n        name="email"\n        type="text"\n        placeholder="yourname@ex.com"\n        required\n      />\n\n      <label for="password">Password</label>\n      <input\n        id="password"\n        name="password"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        required\n      />\n\n      <label for="confirm">Confirm Password</label>\n      <input\n        id="confirm"\n        name="confirm"\n        type="password"\n        placeholder="\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2\xe2\x80\xa2"\n        required \n      />\n\n      <p id="error" class="error hidden">Passwords do not match</p>\n        \n\n      <button type="submit">Create Account</button>\n \n      <p class="sub-submit">\n        Already have an account?\n        <a href="index.html">Login</a>\n      </p>\n    </form>\n  </main>\n\n  <script>\n    const form = document.getElementById("createform");\n    const password = document.getElementById("password");\n    const confirm = document.getElementById("confirm");\n    const error = document.getElementById("error");\n\n    form.addEventListener("submit", (e) => {\n      if (password.value !== confirm.value) {\n        e.preventDefault();\n        error.classList.remove("hidden");\n      }\n    });\n  </script>\n</body>\n</html>'
+
+2026-02-09T09:34:08.167407 - From 127.0.0.1:49440: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'
+
+2026-02-09T09:34:17.374667 - From 127.0.0.1:49448: 
+POST /create HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+Content-Length: 85
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Origin: https://localhost:8443
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://localhost:8443/createacc.html
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+
+Sent: 
+b'<!DOCTYPE html>\n<html lang="en">\n<head>\n  <meta charset="UTF-8" />\n  <title>Standin Dashboard</title>\n  <link rel="stylesheet" href="style.css" />\n</head>\n\n<body class="dashboard">\n  <a href="index.html" class="back-button top-left">X</a>\n\n  <main class="dashboard-content">\n    <h1>Get Trolled Lol</h1>\n    <p>Ur actually so dumb lmao</p>\n  </main>\n</body>\n</html>'
+
+2026-02-09T09:34:17.424313 - From 127.0.0.1:49452: 
+GET /style.css HTTP/1.1
+Host: localhost:8443
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36
+sec-ch-ua: "Google Chrome";v="143", "Chromium";v="143", "Not A(Brand";v="24"
+sec-ch-ua-mobile: ?0
+Accept: text/css,*/*;q=0.1
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: style
+Referer: https://localhost:8443/create
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.9
+
+
+Sent: 
+b'* { box-sizing: border-box; }\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\n  min-height: 100vh;\n  display: grid;\n  place-items: center;\n  background: #0f172a; /* dark navy */\n  color: #e2e8f0;\n}\n\n.home-container {\n  width: min(420px, 92vw);\n  padding: 28px;\n  border-radius: 16px;\n  background: rgba(255, 255, 255, 0.06);\n  border: 1px solid rgba(255, 255, 255, 0.12);\n  backdrop-filter: blur(8px);\n}\n\nh1 {\n  margin: 0 0 6px;\n  font-size: 1.6rem;\n}\n\n.subtitle {\n  margin: 0 0 18px;\n  opacity: 0.85;\n}\n\n.login-form {\n  display: grid;\n  gap: 10px;\n}\n\nlabel {\n  font-size: 0.9rem;\n  opacity: 0.9;\n}\n\ninput {\n  padding: 12px 12px;\n  border-radius: 10px;\n  border: 1px solid rgba(255, 255, 255, 0.18);\n  background: rgba(0, 0, 0, 0.25);\n  color: inherit;\n  outline: none;\n}\n\ninput:focus {\n  border-color: rgba(255, 255, 255, 0.35);\n}\n\nbutton {\n  margin-top: 6px;\n  padding: 12px;\n  border: 0;\n  border-radius: 10px;\n  cursor: pointer;\n  font-weight: 600;\n}\n\n.sub-submit {\n  margin:6px 0 0;\n  font-size: 0.9rem;\n  opacity: 0.85;\n}\n\n.dashboard {\n  min-height: 10vh;\n}\n\n.dashboard-content {\n  max-width: 600px;\n  margin: 80px auto 0;\n}\n\n.top-left {\n  position: absolute;\n  top: 20px;\n  left: 20px;\n}\n\n.back-button {\n  padding: 10px 14px;\n  border-radius: 10px;\n  text-decoration: none;\n  font-weight: 600;\n  background: rgba(255, 255, 255, 0.1);\n  color: inherit;\n}\n\n.back-button:hover {\n  background: rgba(255, 255, 255, 0.18);\n}\n\n.error {\n  color: #f87171;\n  font-size: 0.9rem;\n  margin-top: -4px;\n}\n\n.hidden {\n  display: none;\n}\n\na {color: #93c5fd; }'

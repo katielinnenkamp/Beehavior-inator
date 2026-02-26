@@ -1,0 +1,12 @@
+{
+    "loggers": {
+        "StdoutLogger" : {
+            "active": true
+        }
+    },
+    "servers" : [
+        {"handler": "UploadServer", "mode": "http", "port": 8080, "domain": "example.com", "timeout": 10}
+    ],
+    "user": "nobody",
+    "group": "nogroup"
+}
