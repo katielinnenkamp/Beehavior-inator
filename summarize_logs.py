@@ -101,7 +101,7 @@ def parse_log(text: str):
         while i < len(lines) and lines[i].strip() == "":
             i += 1
 
-        # Skip the "Sent:" blob until next entry
+        # Captures POST (for any payload)
         post_lines = []
         if i < len(lines) and lines[i].strip().lower() != "sent:":
             while i < len(lines) and lines[i].strip().lower() != "sent:" and not RE_ENTRY.match(lines[i].strip()):
@@ -110,6 +110,7 @@ def parse_log(text: str):
         if post_lines and evt["method"] == "POST":
             evt["post_body"] = "\n".join(post_lines).strip()[:2000]
 
+        # Now skips rest of request till next entry
         if i < len(lines) and lines[i].strip().lower() == "sent:":
             i += 1
             while i < len(lines) and not RE_ENTRY.match(lines[i].strip()):

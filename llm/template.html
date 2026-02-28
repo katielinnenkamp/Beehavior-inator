@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Honeypot Threat Dashboard</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+h1 { margin-top: 0; }
+.low { color: green; }
+.medium { color: orange; }
+.high { color: red; }
+.critical { color: darkred; font-weight: bold; }
+.section { margin-bottom: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Honeypot Threat Dashboard</h1>
+
+<div class="section">
+<strong>Timestamp:</strong> {{timestamp}}
+</div>
+
+<div class="section">
+<strong>Threat Level:</strong>
+<span class="{{level_class}}">{{threat_level}}</span>
+</div>
+
+<div class="section">
+<strong>Summary:</strong>
+<p>{{summary}}</p>
+</div>
+
+<div class="section">
+<strong>Grouped Activity:</strong>
+{{grouped_activity}}
+</div>
+
+<div class="section">
+<strong>Explanation:</strong>
+<p>{{explanation}}</p>
+</div>
+
+</div>
+</body>
+</html>
