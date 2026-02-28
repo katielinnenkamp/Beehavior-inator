@@ -5,7 +5,7 @@ from pathlib import Path
 
 # --- Absolute paths based on script location  ---
 BASE_DIR = Path(__file__).resolve().parent
-LOG_FILE = BASE_DIR / "logs" / "server-https-8443.log"
+LOG_FILE = BASE_DIR / "logs" / "server-http-8080.log"
 PARSED_DIR = BASE_DIR / "parsed"
 OFFSET_FILE = PARSED_DIR / ".offset"
 CARRY_FILE = PARSED_DIR / ".carry"
@@ -17,6 +17,7 @@ RE_ENTRY = re.compile(
 )
 # GET /path HTTP/1.1
 RE_REQ = re.compile(r"^(?P<meth>[A-Z]+)\s+(?P<path>\S+)\s+HTTP/\d\.\d\s*$")
+
 
 def load_offset() -> int:
     try:
@@ -30,9 +31,11 @@ def load_offset() -> int:
 def save_offset(offset: int) -> None:
     OFFSET_FILE.write_text(str(offset), encoding="utf-8")
 
+
 def parse_log(text: str):
     lines = text.splitlines()
     i = 0
+
     while i < len(lines):
         m = RE_ENTRY.match(lines[i].strip())
         if not m:
@@ -42,7 +45,6 @@ def parse_log(text: str):
         evt = {
             "ts": m.group("ts"),
             "src_ip": m.group("ip"),
-            "src_port": int(m.group("port")),
             "method": None,
             "path": None,
             "host": None,
@@ -50,6 +52,9 @@ def parse_log(text: str):
             "referer": None,
             "content_type": None,
             "content_length": None,
+            "post_body": None,
+            "cf_connecting_ip": None,
+            "cf_country": None,
         }
 
         i += 1
@@ -81,6 +86,15 @@ def parse_log(text: str):
                         evt["content_length"] = int(v)
                     except ValueError:
                         pass
+                elif k == "cf-connecting-ip":
+                    evt["cf_connecting_ip"] = v
+                    evt["src_ip"] = v
+                elif k == "cf-ipcountry":
+                    evt["cf_country"] = v
+                elif k == "x-forwarded-for" and not evt["cf_connecting_ip"]:
+                    evt["src_ip"] = v.split(",")[0].strip()
+                elif k == "x-real-ip" and not evt["cf_connecting_ip"]:
+                    evt["src_ip"] = v.strip()
             i += 1
 
         # Skip blank lines
@@ -88,12 +102,21 @@ def parse_log(text: str):
             i += 1
 
         # Skip the "Sent:" blob until next entry
+        post_lines = []
+        if i < len(lines) and lines[i].strip().lower() != "sent:":
+            while i < len(lines) and lines[i].strip().lower() != "sent:" and not RE_ENTRY.match(lines[i].strip()):
+                post_lines.append(lines[i])
+                i += 1
+        if post_lines and evt["method"] == "POST":
+            evt["post_body"] = "\n".join(post_lines).strip()[:2000]
+
         if i < len(lines) and lines[i].strip().lower() == "sent:":
             i += 1
             while i < len(lines) and not RE_ENTRY.match(lines[i].strip()):
                 i += 1
 
         yield evt
+
 
 def main():
     PARSED_DIR.mkdir(parents=True, exist_ok=True)
@@ -104,14 +127,13 @@ def main():
 
     last_offset = load_offset()
 
-    # Read new bytes using byte offsets 
+    # Read new bytes using byte offsets
     with LOG_FILE.open("rb") as f:
         f.seek(last_offset)
         new_bytes = f.read()
         end_pos = f.tell()
 
     if not new_bytes:
-        # nothing new
         return
 
     carry_bytes = b""
@@ -129,7 +151,7 @@ def main():
         return
 
     parse_bytes = combined[: last_nl + 1]
-    remainder = combined[last_nl + 1 :]
+    remainder = combined[last_nl + 1:]
     CARRY_FILE.write_bytes(remainder)
 
     text = parse_bytes.decode("utf-8", errors="ignore")
