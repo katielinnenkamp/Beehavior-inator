@@ -8,3 +8,7 @@ logs/*.log
 *.pem
 .vscode/
 **/.DS_Store
+*.bak
+*.offset
+*.log
+parsed/

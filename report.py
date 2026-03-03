@@ -2,17 +2,18 @@
 import json
 import requests
 import html
-import re
 from pathlib import Path
+from datetime import datetime
 
 # ===== Configuration =====
-LOG_FILE = Path("parsed/summary.jsonl")
-STATE_FILE = Path("llm/honeypot_state.json")
-LAST_GOOD_HTML = Path("site/report.html.bak")
-OUTPUT_FILE = Path("site/report.html")
+LOG_FILE = Path("/home/host/Beehavior-inator/parsed/summary.jsonl")
+STATE_FILE = Path("/home/host/Beehavior-inator/llm/honeypot_state.json")
+LAST_GOOD_HTML = Path("/home/host/Beehavior-inator/site/report.html.bak")
+OUTPUT_FILE = Path("/home/host/Beehavior-inator/site/report.html")
 OLLAMA_CONNECT = "http://localhost:11434/api/generate"
 MODEL = "qwen2.5"
-MAX_EVENTS = 3
+MAX_EVENTS = 10
+
 
 # ===== Log Reader =====
 class LogReader:
@@ -44,46 +45,28 @@ class LogReader:
                     break
                 try:
                     events.append(json.loads(line.strip()))
-                    self.offset = f.tell()
-
                 except json.JSONDecodeError:
-                    self.offset = f.tell()
-                    continue
+                    pass
+                self.offset = f.tell()
+
         return events
 
-#format, strips
-def format_events(events):
-    # Take the most recent MAX_EVENTS
-    events = events[-MAX_EVENTS:]
-    return "\n".join(json.dumps(e) for e in events)
 
-#simple sanitization
-def sanitize_logs(formatted_logs):
-    return html.escape(formatted_logs)
+# ===== LLM JSON ANALYSIS =====
+def generate_analysis(events):
 
-def strip_scripts(html_content):
-    html_content = re.sub(r"<script.*?>.*?</script>", "", html_content, flags=re.DOTALL | re.IGNORECASE)
-    html_content = re.sub(r"on\w+\s*=", "", html_content, flags=re.IGNORECASE)
-    return html_content
+    safe_logs = html.escape(json.dumps(events, indent=2))
 
-#ollama llm prompt, acts
-def generate_html(events):
-    formatted = format_events(events)
-    safe_logs = sanitize_logs(formatted)
-    
     prompt = f"""
 You are a cybersecurity analyst.
 
 Return ONLY valid JSON.
 No markdown.
-No explanation.
 No commentary.
 
-JSON FORMAT:
+FORMAT:
 
 {{
-  "timestamp_utc": "",
-  "threat_level": "Low | Medium | High | Critical",
   "summary": "",
   "grouped_activity": [
     {{
@@ -96,15 +79,14 @@ JSON FORMAT:
 }}
 
 Rules:
-- Group events by source IP
-- Identify scanning, credential stuffing, bots if present
-- Keep explanations concise
-- Ensure valid JSON only
+- Group by IP
+- Identify scanning or bot patterns
+- Keep concise
+- Valid JSON only
 
-Honeypot Events:
+Events:
 {safe_logs}
 """
-
 
     try:
         response = requests.post(
@@ -112,53 +94,120 @@ Honeypot Events:
             json={
                 "model": MODEL,
                 "prompt": prompt,
-                "stream": False
+                "stream": False,
+                "options": {
+                    "temperature": 0.2
+                }
             },
             timeout=540
         )
+
         if response.status_code == 200:
-            if response.status_code == 200:
-                raw = response.json()["response"]
-                print("----- LLM RAW OUTPUT -----")
-                print(raw)
-                print("--------------------------")
-            return raw
-            #return response.json()["response"]
+            raw = response.json()["response"]
+            print("----- LLM RAW OUTPUT -----")
+            print(raw)
+            print("--------------------------")
+
+            return json.loads(raw)
+
     except Exception as e:
-        print("Ollama error:", e)
+        print("LLM error:", e)
+
     return None
 
-#main, takes log file, reads, prompts llm generates new html
+
+# ===== HTML RENDERING (STATIC TEMPLATE) =====
+def render_dashboard(data):
+
+    timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    grouped_html = ""
+    for group in data.get("grouped_activity", []):
+        indicators = "".join(
+            f"<li>{html.escape(i)}</li>"
+            for i in group.get("indicators", [])
+        )
+
+        grouped_html += f"""
+        <div class="ip-block">
+            <h3>{html.escape(group.get("ip", "Unknown"))}</h3>
+            <p>{html.escape(group.get("description", ""))}</p>
+            <ul>{indicators}</ul>
+        </div>
+        """
+
+    html_page = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Honeypot Threat Dashboard</title>
+<meta http-equiv="Content-Security-Policy"
+content="default-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+
+<h1>Honeypot Threat Dashboard</h1>
+
+<div class="section">
+<strong>Timestamp:</strong> {timestamp}
+</div>
+
+<div class="section">
+<strong>Summary:</strong>
+<p>{html.escape(data.get("summary", ""))}</p>
+</div>
+
+<div class="section">
+<strong>Grouped Activity:</strong>
+{grouped_html}
+</div>
+
+<div class="section">
+<strong>Overall Explanation:</strong>
+<p>{html.escape(data.get("overall_explanation", ""))}</p>
+</div>
+
+</div>
+</body>
+</html>
+"""
+
+    return html_page
+
+
+# ===== MAIN =====
 def main():
     reader = LogReader(LOG_FILE)
     events = reader.read_new()
 
-    #check for anything new
     if not events:
         print("No new events.")
         return
 
-    print(f"Generating dashboard from {len(events)} new events...")
-    htmlOut = generate_html(events)
+    print(f"Analyzing {len(events)} events...")
 
-    if htmlOut and "<html" in htmlOut.lower():
-        htmlOut = strip_scripts(htmlOut)
-        #sanitization
-        csp = """<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">"""
-        htmlOut = htmlOut.replace("<head>", f"<head>{csp}")
+    analysis = generate_analysis(events)
 
-        #backup
-        if OUTPUT_FILE.exists():
-            LAST_GOOD_HTML.write_text(OUTPUT_FILE.read_text())
-
-        OUTPUT_FILE.write_text(htmlOut)
-        reader._save_state()
-        print("Dashboard updated.")
-    else:
-        print("LLM failed or returned invalid HTML.")
+    if not analysis:
+        print("LLM failed — restoring backup.")
         if LAST_GOOD_HTML.exists():
             OUTPUT_FILE.write_text(LAST_GOOD_HTML.read_text())
-            print("Restored last known good dashboard.")
+        return
+
+    final_html = render_dashboard(analysis)
+
+    if OUTPUT_FILE.exists():
+        LAST_GOOD_HTML.write_text(OUTPUT_FILE.read_text())
+
+    OUTPUT_FILE.write_text(final_html)
+    OUTPUT_FILE.chmod(0o644)
+
+    reader._save_state()
+
+    print("Dashboard updated successfully.")
+
 
 if __name__ == "__main__":
     main()

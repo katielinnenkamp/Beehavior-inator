@@ -27,6 +27,10 @@ class LoginSiteServer(ApacheServer):
             body = read_file("createacc.html")
             return 200, [("Content-Type", "text/html; charset=utf-8")], body
 
+        if path == "/report.html":
+            body = read_file("report.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+
         if path == "/standin.html":
             body = read_file("standin.html")
             return 200, [("Content-Type", "text/html; charset=utf-8")], body
