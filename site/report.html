@@ -16,31 +16,32 @@
     <div class="dashboard-content">
 
       <h1>Honeypot Threat Dashboard</h1>
-      <p class="subtitle">Generated: {{TIMESTAMP}}</p>
+      <p class="subtitle">Generated: 2026-03-04 05:03:34 UTC</p>
 
       <div class="dashboard-grid">
 
         <div class="home-container wide">
           <h2>Summary</h2>
-          <p>{{SUMMARY}}</p>
+          <p>The IP address 128.223.223.127 is probing for the existence of a favicon.ico file, which is typical behavior for web crawlers and bots to validate site structure.</p>
         </div>
 
         <div class="home-container wide">
           <h2>Grouped Activity</h2>
           <div class="activity-grid">
-            {{GROUPED_ACTIVITY}}
+            <div class="ip-block"><div class="ip-addr">128.223.223.127</div><p class="ip-meta">US &mdash; 2026-03-03T16:11:26Z</p><p class="ip-desc">Probing for favicon.ico</p><ul class="indicators"><li>GET / at 16:11:26</li><li>GET /favicon.ico at 16:11:26.805785</li><li>GET /favicon.ico at 16:11:27.925761</li></ul></div>
           </div>
         </div>
 
         <div class="home-container wide">
           <h2>Expansion Notes</h2>
-          <p>{{EXPANSION_NOTES}}</p>
+          <p>To entertain the adversary, we can create a fake favicon.ico file that contains benign content or a misleading message.</p>
         </div>
 
         <div class="home-container wide">
           <h2>HTML Additions</h2>
           <p>The LLM doesn't have any access to the current website. This is due to constraints of the size of the current LLM. If you're able to utilize a bigger system, feel free to adjust the model and prompts as need be.</p>
-          <pre class="html-additions">{{HTML_ADDITIONS}}</pre>
+          <pre class="html-additions">            &lt;link rel=&#x27;shortcut icon&#x27; href=&#x27;/fake_favicon.ico&#x27;&gt;
+            &lt;img src=&#x27;/fake_favicon.ico&#x27; alt=&#x27;Fake Favicon&#x27;&gt;</pre>
         </div>
 
       </div>

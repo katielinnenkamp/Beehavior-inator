@@ -2,6 +2,7 @@ from servers.ApacheServer import ApacheServer
 from urllib.parse import parse_qs
 import os
 import hashlib
+import re
 
 SITE_DIR = os.path.join(os.path.dirname(__file__), "..", "site")
 
@@ -31,6 +32,31 @@ class LoginSiteServer(ApacheServer):
             body = read_file("report.html")
             return 200, [("Content-Type", "text/html; charset=utf-8")], body
 
+        if path == "/archive.html":
+            body = read_file("archive.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+
+        if re.match(r"^/archive/report_(\d+)\.html$", path):
+            body = read_file(path.lstrip("/"))
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+        
+        if path == "/90.html":
+            body = read_file("90.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+
+        if path == "/pages/90s-boy-bands.html":
+            body = read_file("pages/90s-boy-bands.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+
+
+        if path == "/pages/one-hit-wonders.html":
+            body = read_file("pages/one-hit-wonders.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+
+        if path == "/pages/top-90s-hits.html":
+            body = read_file("pages/top-90s-hits.html")
+            return 200, [("Content-Type", "text/html; charset=utf-8")], body
+        
         if path == "/standin.html":
             body = read_file("standin.html")
             return 200, [("Content-Type", "text/html; charset=utf-8")], body

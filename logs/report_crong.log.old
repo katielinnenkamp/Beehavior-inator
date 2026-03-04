@@ -1,0 +1,2473 @@
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting repeated GET requests to various paths on the website, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to different paths including /, /favicon.ico, and /createacc.html.",
+      "indicators": ["Multiple GET requests", "Path enumeration"]
+    }
+  ],
+  "overall_explanation": "The behavior indicates an automated process attempting to gather information about the website's structure."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is making repeated requests to the website www.sudo-cheese.org, primarily accessing '/report.html' and '/favicon.ico'. The user agent suggests these requests are likely automated or from a bot.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to various paths on the website, possibly indicating scanning activity.",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The behavior observed is consistent with a bot or automated script attempting to gather information from the site."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is making repeated requests to the /report.html and /favicon.ico endpoints of www.sudo-cheese.org, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to report.html and favicon.ico",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The pattern of repeated requests from the same IP address to multiple endpoints is indicative of automated scanning or bot activity."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting behavior consistent with a web scraping or botnet activity, repeatedly requesting the '/report.html' and '/favicon.ico' paths.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to '/report.html' and '/favicon.ico'",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "This pattern suggests an automated process or bot is scanning the website for potential vulnerabilities or data collection."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting repeated requests for /favicon.ico and the homepage, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to /favicon.ico and the homepage of www.sudo-cheese.org",
+      "indicators": []
+    },
+    {
+      "ip": "34.187.199.166",
+      "description": "GET request to the homepage and a CSS file of sudo-cheese.org from an Android device",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests for /favicon.ico from the same IP address over a period of time, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to /favicon.ico",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting repeated requests for /favicon.ico and /report.html, which may indicate a bot or automated script scanning the website.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to /favicon.ico and /report.html",
+      "indicators": [
+        "/favicon.ico",
+        "/report.html"
+      ]
+    },
+    {
+      "ip": "178.16.53.170",
+      "description": "A single attempt to access wp-login.php, which could be a login attempt or an automated scanning activity.",
+      "indicators": [
+        "/wp-login.php"
+      ]
+    }
+  ],
+  "overall_explanation": "The activities from IP 63.155.49.149 suggest potential bot behavior due to the repeated requests, while the single request from IP 178.16.53.170 could be a legitimate user or an automated login attempt."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 63.155.49.149 exhibits repeated GET requests to /report.html and /favicon.ico, suggesting a bot or automated script is probing the site.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Probing activities with repeated GET requests to /report.html and /favicon.ico",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The observed behavior is consistent with a bot or automated script attempting to gather information about the website."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting scanning behavior by repeatedly accessing the '/report.html' page and requesting a favicon from an iPhone user agent.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Scanning or bot activity detected.",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated requests to the same URL and favicon from a single IP address, using different user agents that mimic mobile devices, suggest automated scanning behavior."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 34.138.51.237 is making repeated GET requests to the root path and '/getcmd' on www.sudo-cheese.org, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "34.138.51.237",
+      "description": "Repeated GET requests to '/' and '/getcmd'",
+      "indicators": [
+        "/",
+        "/getcmd"
+      ]
+    }
+  ],
+  "overall_explanation": "The pattern of repeated requests to the same paths with slight variations in user agent and referer suggests automated activity, possibly from a bot or scanner."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to '/getcmd' and '/' from the same IP address, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "34.138.51.237",
+      "description": "Repetitive GET requests targeting '/getcmd' and '/' on www.sudo-cheese.org with varying referrers.",
+      "indicators": [
+        "/getcmd",
+        "/"
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated attempts to access specific URLs from the same IP address suggest automated scanning or bot activity."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to the same IP address, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "34.138.51.237",
+      "description": "Repeated GET requests to '/' and '/getcmd' from a single source.",
+      "indicators": [
+        "Frequent access to the same URLs",
+        "Same user agent for all requests"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of automated scanning or bot behavior targeting the specified domain."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address (63.155.49.149) to retrieve 'report.html' and 'style.css' files, suggesting a bot or automated scanning activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests targeting static content from the same IP address over multiple timestamps.",
+      "indicators": [
+        "/report.html",
+        "/style.css"
+      ]
+    },
+    {
+      "ip": "34.138.51.237",
+      "description": "Single GET request to '/getcmd' with a referer pointing to an external IP address.",
+      "indicators": [
+        "/getcmd"
+      ]
+    },
+    {
+      "ip": "91.90.126.100",
+      "description": "Single GET request to '/' from a different IP address.",
+      "indicators": [
+        "/"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of potential automated scanning or bot behavior, particularly from the IP 63.155.49.149."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 91.224.92.99 is exhibiting behavior indicative of a bot or automated scanning activity, targeting WordPress-related endpoints.",
+  "grouped_activity": [
+    {
+      "ip": "91.224.92.99",
+      "description": "Scanning for WordPress vulnerabilities and information gathering",
+      "indicators": [
+        "/wp-includes/ID3/license.txt",
+        "/feed/",
+        "/xmlrpc.php?rsd",
+        "/blog/wp-includes/wlwmanifest.xml",
+        "/web/wp-includes/wlwmanifest.xml",
+        "/wordpress/wp-includes/wlwmanifest.xml",
+        "/wp/wp-includes/wlwmanifest.xml",
+        "/2020/wp-includes/wlwmanifest.xml"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is making multiple GET requests to various WordPress-related endpoints, which are common in automated scanning activities aimed at identifying vulnerabilities or gathering information."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to wp-includes/wlwmanifest.xml from the same IP address (91.224.92.99) suggest a potential scanning or bot activity targeting WordPress installations.",
+  "grouped_activity": [
+    {
+      "ip": "91.224.92.99",
+      "description": "Scanning for vulnerabilities in WordPress sites by requesting non-existent files (wlwmanifest.xml).",
+      "indicators": [
+        "/2019/wp-includes/wlwmanifest.xml",
+        "/2021/wp-includes/wlwmanifest.xml",
+        "/shop/wp-includes/wlwmanifest.xml",
+        "/wp1/wp-includes/wlwmanifest.xml",
+        "/test/wp-includes/wlwmanifest.xml",
+        "/site/wp-includes/wlwmanifest.xml",
+        "/cms/wp-includes/wlwmanifest.xml"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of a bot or scanner attempting to identify potential WordPress sites and their vulnerabilities."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 182.69.183.2 is making repeated GET requests to the homepage and a specific path, which may indicate automated scanning or probing activity. The IP address 63.155.49.149 is also making multiple GET requests to various paths on the website, potentially indicating either legitimate user behavior or an automated bot.",
+  "grouped_activity": [
+    {
+      "ip": "182.69.183.2",
+      "description": "Repeated GET requests to the homepage and a specific path.",
+      "indicators": []
+    },
+    {
+      "ip": "63.155.49.149",
+      "description": "Multiple GET requests to various paths on the website.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to /report.html and /favicon.ico from the same IP address (63.155.49.149) within a short period, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Scanning or bot activity targeting the website.",
+      "indicators": [
+        {
+          "path": "/report.html",
+          "method": "GET"
+        },
+        {
+          "path": "/favicon.ico",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated requests to both the main page and favicon suggest automated scanning or bot behavior."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address (63.155.49.149) to /report.html and /favicon.ico within a short time frame, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Scanning or bot activity targeting the website www.sudo-cheese.org for report.html and favicon.ico.",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated requests to these specific paths from a single IP address suggest automated scanning behavior."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting repeated requests for the '/report.html' and '/favicon.ico' paths, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to '/report.html' and '/favicon.ico'",
+      "indicators": [
+        "/report.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The pattern of repeated requests from the same IP address for specific resources is indicative of automated scanning or bot activity."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 63.155.49.149 shows repeated requests to /report.html and /favicon.ico, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to /report.html and /favicon.ico from the same IP address within a short time frame.",
+      "indicators": []
+    },
+    {
+      "ip": "151.243.109.152",
+      "description": "GET requests targeting WordPress-specific files such as /wp-includes/wlwmanifest.xml and /xmlrpc.php, indicating potential scanning or probing for vulnerabilities.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 151.243.109.152 is performing repeated GET requests to various wp-includes/wlwmanifest.xml paths, which may indicate a scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "151.243.109.152",
+      "description": "Repeated GET requests targeting different WordPress directories.",
+      "indicators": [
+        "/blog/wp-includes/wlwmanifest.xml",
+        "/web/wp-includes/wlwmanifest.xml",
+        "/wordpress/wp-includes/wlwmanifest.xml",
+        "/website/wp-includes/wlwmanifest.xml",
+        "/wp/wp-includes/wlwmanifest.xml",
+        "/news/wp-includes/wlwmanifest.xml",
+        "/2020/wp-includes/wlwmanifest.xml",
+        "/2019/wp-includes/wlwmanifest.xml",
+        "/shop/wp-includes/wlwmanifest.xml"
+      ]
+    }
+  ],
+  "overall_explanation": "This pattern suggests an automated tool or bot is attempting to identify vulnerabilities in the website by checking for specific files."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests targeting various paths on the website, suggesting a potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "151.243.109.152",
+      "description": "Scanning for vulnerabilities by accessing multiple WordPress-related paths.",
+      "indicators": [
+        "/wp1/wp-includes/wlwmanifest.xml",
+        "/test/wp-includes/wlwmanifest.xml",
+        "/wp2/wp-includes/wlwmanifest.xml",
+        "/site/wp-includes/wlwmanifest.xml",
+        "/cms/wp-includes/wlwmanifest.xml",
+        "/sito/wp-includes/wlwmanifest.xml"
+      ]
+    },
+    {
+      "ip": "63.155.49.149",
+      "description": "Accessing common website resources from an iPhone, possibly a legitimate user or a benign bot.",
+      "indicators": [
+        "/",
+        "/style.css",
+        "/report.html"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity from IP 151.243.109.152 shows patterns of scanning, while the activity from 63.155.49.149 appears to be normal user behavior."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 63.155.49.149 is making repeated GET requests to various resources on the website, potentially indicating a bot or automated scanning activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests to different resources on the site.",
+      "indicators": [
+        "/report.html",
+        "/",
+        "/apple-touch-icon.png",
+        "/favicon.ico",
+        "/apple-touch-icon-precomposed.png",
+        "/apple-touch-icon-120x120-precomposed.png",
+        "/apple-touch-icon-120x120.png"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity suggests an automated process or bot is probing the site for various resources, possibly to gather information or test vulnerabilities."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests targeting common favicon and icon paths, followed by a request for the homepage and a report.html file.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Scanning or bot activity targeting static content of the website.",
+      "indicators": [
+        "/apple-touch-icon.png",
+        "/favicon.ico",
+        "/apple-touch-icon-120x120-precomposed.png",
+        "/apple-touch-icon-120x120.png",
+        "/apple-touch-icon-precomposed.png",
+        "/"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is making repeated requests to common static content paths and the homepage, which suggests it could be a bot or scanner attempting to gather information about the website."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is exhibiting repeated GET requests for favicon and other static files, which may indicate a bot or automated script scanning the website.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Repeated GET requests for favicon and other static files from the same IP address.",
+      "indicators": [
+        "/apple-touch-icon.png",
+        "/favicon.ico",
+        "/apple-touch-icon-precomposed.png",
+        "/report.html"
+      ]
+    },
+    {
+      "ip": "170.106.193.108",
+      "description": "Single GET request for the root path.",
+      "indicators": [
+        "/"
+      ]
+    },
+    {
+      "ip": "49.51.73.183",
+      "description": "Single GET request for the root path.",
+      "indicators": [
+        "/"
+      ]
+    },
+    {
+      "ip": "50.220.121.251",
+      "description": "GET requests for the root path, style.css, and favicon.ico.",
+      "indicators": [
+        "/",
+        "/style.css",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The identified patterns suggest potential automated scanning or bot activity targeting static resources of the website."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 50.220.121.251 is exhibiting scanning behavior, including requests for /login, /createacc.html, and repeated requests for /favicon.ico.",
+  "grouped_activity": [
+    {
+      "ip": "50.220.121.251",
+      "description": "Scanning or bot activity detected.",
+      "indicators": [
+        "/login",
+        "/createacc.html",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address (50.220.121.252) targeting common static resources and homepage, suggesting potential bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "50.220.121.252",
+      "description": "Bot or automated scanning activity",
+      "indicators": [
+        "/apple-touch-icon-precomposed.png",
+        "/apple-touch-icon.png",
+        "/favicon.ico",
+        "/"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address 50.220.121.252 is making repeated GET requests to common static resources and the homepage, which is indicative of bot activity or automated scanning."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple IP addresses are attempting to access the website, with some showing signs of scanning or bot-like behavior.",
+  "grouped_activity": [
+    {
+      "ip": "50.220.121.249",
+      "description": "This IP is performing a series of GET requests and a POST request for login credentials.",
+      "indicators": []
+    },
+    {
+      "ip": "50.220.121.251",
+      "description": "This IP is making repeated GET requests to the root path, potentially scanning the site.",
+      "indicators": []
+    },
+    {
+      "ip": "50.220.121.252",
+      "description": "This IP is accessing the website multiple times, including a request for an Apple touch icon.",
+      "indicators": []
+    },
+    {
+      "ip": "162.62.132.25",
+      "description": "This IP is making a GET request to the root path from Germany.",
+      "indicators": []
+    },
+    {
+      "ip": "43.157.191.20",
+      "description": "This IP is accessing the website from Brazil, potentially scanning or probing for vulnerabilities.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address are observed, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "67.219.201.132",
+      "description": "Initial scan of the website with requests for root path, style.css, and favicon.ico.",
+      "indicators": []
+    },
+    {
+      "ip": "107.20.123.195",
+      "description": "Repeated GET requests to the root path, style.css, and favicon.ico, possibly indicating a bot or automated script.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The activity from these IPs suggests that they are likely performing a basic website reconnaissance. The repeated requests for common resources like CSS and favicon could be part of an automated process."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 5 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The logs indicate a potential botnet activity with multiple IPs accessing the website at different times, possibly probing for vulnerabilities or gathering information.",
+  "grouped_activity": [
+    {
+      "ip": "88.218.173.175",
+      "description": "Multiple GET requests from this IP to different paths on the site within a short time frame.",
+      "indicators": []
+    },
+    {
+      "ip": "49.51.166.228",
+      "description": "A single GET request from this IP to the homepage of the site.",
+      "indicators": []
+    },
+    {
+      "ip": "170.106.143.6",
+      "description": "A single GET request from this IP to the homepage of a different domain, possibly indicating a misconfiguration or an attempt to access a related site.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Single GET request to the root path of sudo-cheese.org from an Android device.",
+  "grouped_activity": [
+    {
+      "ip": "44.222.226.251",
+      "description": "Access attempt to the website.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "182.44.12.37",
+      "description": "Scanning activity detected from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.164.197.177",
+      "description": "Single GET request to the root path of sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Two GET requests from different IPs with the same user agent and referer.",
+  "grouped_activity": [
+    {
+      "ip": "124.156.226.179",
+      "description": "GET request to root path of www.sudo-cheese.org",
+      "indicators": []
+    },
+    {
+      "ip": "124.156.179.141",
+      "description": "GET request to root path of www.sudo-cheese.org",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "180.153.236.75",
+      "description": "Potential bot or automated scanner activity detected.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "122.51.236.174",
+      "description": "Single GET request to the homepage of www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from different IPs targeting the homepage and login page of sudo-cheese.org, potentially indicating a bot or scanning activity.",
+  "grouped_activity": [
+    {
+      "ip": "43.135.185.59",
+      "description": "Accessing the homepage of sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "104.234.53.219",
+      "description": "Accessing the login page of sudo-cheese.org, possibly a bot or scanning attempt.",
+      "indicators": []
+    },
+    {
+      "ip": "101.33.66.34",
+      "description": "Accessing the homepage of www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The activities are spread across different IPs, but there is a pattern of accessing both the homepage and login page, which could indicate automated scanning or bot activity."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 76.27.206.196 is exhibiting behavior indicative of a web scraping or botnet activity, including multiple GET requests for static files and an attempted login.",
+  "grouped_activity": [
+    {
+      "ip": "76.27.206.196",
+      "description": "Web scraping or potential botnet activity",
+      "indicators": [
+        {
+          "timestamp": "2026-03-01T13:00:10.545325",
+          "method": "GET",
+          "path": "/report.html"
+        },
+        {
+          "timestamp": "2026-03-01T13:00:10.751366",
+          "method": "GET",
+          "path": "/style.css"
+        },
+        {
+          "timestamp": "2026-03-01T13:00:10.870086",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:19.092280",
+          "method": "GET",
+          "path": "/report.html"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:19.227273",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:23.224414",
+          "method": "GET",
+          "path": "/"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:23.444639",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:28.817412",
+          "method": "POST",
+          "path": "/login"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:28.979684",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:33.126862",
+          "method": "GET",
+          "path": "/"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 76.27.206.196 is exhibiting behavior typical of a web scraping or botnet activity, including multiple GET requests for static resources and a POST request to the login endpoint.",
+  "grouped_activity": [
+    {
+      "ip": "76.27.206.196",
+      "description": "Web scraping or potential botnet activity",
+      "indicators": [
+        {
+          "timestamp": "2026-03-01T13:00:10.545325",
+          "activity": "GET /report.html"
+        },
+        {
+          "timestamp": "2026-03-01T13:00:10.751366",
+          "activity": "GET /style.css"
+        },
+        {
+          "timestamp": "2026-03-01T13:00:10.870086",
+          "activity": "GET /favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:19.092280",
+          "activity": "GET /report.html"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:19.227273",
+          "activity": "GET /favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:23.224414",
+          "activity": "GET /"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:23.444639",
+          "activity": "GET /favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:28.817412",
+          "activity": "POST /login (application/x-www-form-urlencoded, 27 bytes)"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:28.979684",
+          "activity": "GET /favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-01T13:01:33.126862",
+          "activity": "GET / (referer: https://www.sudo-cheese.org/login)"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 76.27.206.196 is exhibiting behavior consistent with a bot or automated scanner, making multiple requests to the website within a short period.",
+  "grouped_activity": [
+    {
+      "ip": "76.27.206.196",
+      "description": "Multiple GET and POST requests targeting various resources on www.sudo-cheese.org.",
+      "indicators": [
+        {"path": "/report.html", "method": "GET"},
+        {"path": "/style.css", "method": "GET"},
+        {"path": "/favicon.ico", "method": "GET"},
+        {"path": "/report.html", "method": "GET"},
+        {"path": "/favicon.ico", "method": "GET"},
+        {"path": "/", "method": "GET"},
+        {"path": "/favicon.ico", "method": "GET"},
+        {"path": "/login", "method": "POST"}
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of an automated script or bot performing a reconnaissance scan on the website."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 76.27.206.196 is exhibiting behavior indicative of a bot or automated scanning activity, including multiple GET requests for common resources and a POST request to the login path.",
+  "grouped_activity": [
+    {
+      "ip": "76.27.206.196",
+      "description": "Scanning or bot activity detected.",
+      "indicators": [
+        "/report.html",
+        "/style.css",
+        "/favicon.ico",
+        "/login"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is making multiple GET requests to common resources and attempting a login, which are typical behaviors of automated bots or scanners."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 6 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 76.27.206.196 is performing a series of requests to the website www.sudo-cheese.org, including attempts to create an account and subsequent navigation.",
+  "grouped_activity": [
+    {
+      "ip": "76.27.206.196",
+      "description": "Scanning or bot activity detected with multiple GET and POST requests to various paths on the website.",
+      "indicators": [
+        "/createacc.html",
+        "/create",
+        "/"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is likely a bot or automated script attempting to interact with the website, possibly for account creation."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 4 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.166.247.155",
+      "description": "Single GET request to the homepage.",
+      "indicators": []
+    },
+    {
+      "ip": "63.155.49.149",
+      "description": "GET requests for report.html and style.css from a single source, suggesting potential scraping or automated access.",
+      "indicators": [
+        {
+          "path": "/report.html"
+        },
+        {
+          "path": "/style.css"
+        }
+      ]
+    },
+    {
+      "ip": "43.131.36.84",
+      "description": "Single GET request to the homepage.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 5 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The logs show multiple GET requests from different IPs, primarily targeting the homepage and static files of sudo-cheese.org and www.sudo-cheese.org. The user agents suggest mobile access, but there are no POST bodies or suspicious content types, indicating these might be benign requests.",
+  "grouped_activity": [
+    {
+      "ip": "43.166.247.155",
+      "description": "Access to the homepage of sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "63.155.49.149",
+      "description": "Sequential GET requests for report.html and style.css from www.sudo-cheese.org, likely targeting static files.",
+      "indicators": []
+    },
+    {
+      "ip": "43.131.36.84",
+      "description": "Access to the homepage of sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "43.159.135.203",
+      "description": "Access to the homepage of www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The activity does not exhibit clear signs of malicious scanning or bot patterns, but it is worth monitoring for any unusual spikes in traffic."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Two GET requests were observed from different IPs, both using the same user agent and referring to the same host.",
+  "grouped_activity": [
+    {
+      "ip": "43.159.152.4",
+      "description": "GET request to root path with a valid user agent and referer.",
+      "indicators": []
+    },
+    {
+      "ip": "49.233.45.47",
+      "description": "GET request to root path with a valid user agent and referer.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address targeting different resources on the website, indicating potential web scraping or benign user behavior.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Sequential GET requests to various resources of a single domain within a short period.",
+      "indicators": [
+        "/report.html",
+        "/style.css",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is likely benign as it involves sequential requests for different static assets from the same IP address. However, further investigation may be required to confirm if this is part of a larger pattern or an automated process."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 4 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to common static resources (favicon.ico, apple-touch-icon.png) from the same IP address within a short time frame suggest potential automated scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Potential automated scanning or bot activity targeting common static resources on www.sudo-cheese.org.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Two GET requests were made to the website sudo-cheese.org from different IPs.",
+  "grouped_activity": [
+    {
+      "ip": "43.134.186.61",
+      "description": "Made a GET request to / with an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "198.12.64.46",
+      "description": "Made a GET request to / with a custom user agent from the US.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.166.240.231",
+      "description": "Single GET request to the homepage of www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 5 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 157.143.20.242 is making multiple GET requests to various resources on sudo-cheese.org, including CSS and JavaScript files, suggesting a potential web scraping or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "157.143.20.242",
+      "description": "Multiple GET requests to different resources on the website.",
+      "indicators": [
+        "/css/support_parent.css",
+        "/js/twint_ch.js",
+        "/robots.txt",
+        "/style.css"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is consistent with a bot or script attempting to gather information from the site, possibly for data scraping purposes."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "149.57.180.174",
+      "description": "Single GET request to the root path of sudo-cheese.org using Firefox.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests for /favicon.ico from the same IP address within a short time frame, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "3.87.18.139",
+      "description": "Repeated GET requests to /favicon.ico",
+      "indicators": [
+        {
+          "timestamp": "2026-03-02T01:17:38.872585"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:39.084052"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:44.736885"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated requests for /favicon.ico from the same IP address suggest that this could be a bot or scanning activity."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests for /favicon.ico from the same IP address within a short time frame, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "3.87.18.139",
+      "description": "Scanning or bot activity targeting sudo-cheese.org with repeated GET requests for /favicon.ico.",
+      "indicators": [
+        {
+          "timestamp": "2026-03-02T01:17:38.872585",
+          "method": "GET",
+          "path": "/favicon.ico",
+          "host": "sudo-cheese.org"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:39.084052",
+          "method": "GET",
+          "path": "/favicon.ico",
+          "host": "sudo-cheese.org"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:44.736885",
+          "method": "GET",
+          "path": "/favicon.ico",
+          "host": "sudo-cheese.org"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated requests for /favicon.ico from the same IP address suggest automated scanning or bot activity, possibly probing the website for vulnerabilities."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests for /favicon.ico from the same IP address within a short time frame, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "3.87.18.139",
+      "description": "Repeated GET requests for /favicon.ico",
+      "indicators": [
+        {
+          "timestamp": "2026-03-02T01:17:38.872585",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:39.084052",
+          "method": "GET",
+          "path": "/favicon.ico"
+        },
+        {
+          "timestamp": "2026-03-02T01:17:44.736885",
+          "method": "GET",
+          "path": "/favicon.ico"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is likely from a bot or scanning tool attempting to gather information about the website."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests for /favicon.ico from the same IP address, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "3.87.18.139",
+      "description": "Repeated GET requests to /favicon.ico",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The repeated attempts to access the favicon might be part of a bot or scanning activity."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Identified potential bot activity from IP 43.157.153.236 and 43.157.148.38, both accessing the homepage of sudo-cheese.org.",
+  "grouped_activity": [
+    {
+      "ip": "43.157.153.236",
+      "description": "Accessing the homepage with a mobile user agent from Brazil (BR).",
+      "indicators": []
+    },
+    {
+      "ip": "43.157.148.38",
+      "description": "Accessing the homepage with a mobile user agent from Brazil (BR).",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The activity is consistent with bot behavior, as both IPs are accessing the site using a mobile user agent."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "178.16.53.170",
+      "description": "Potential login attempt to WordPress admin panel.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "173.239.211.42",
+      "description": "Potential login attempt to WordPress admin panel.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 63.155.49.149 is making repeated requests to various resources on the domain www.sudo-cheese.org, which could indicate a bot or automated script scanning for potential vulnerabilities.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Scanning activity with repeated GET requests to different resources on the domain www.sudo-cheese.org.",
+      "indicators": [
+        "/",
+        "/style.css",
+        "/favicon.ico",
+        "/apple-touch-icon-precomposed.png",
+        "/apple-touch-icon.png"
+      ]
+    }
+  ],
+  "overall_explanation": "The pattern of repeated GET requests to multiple resources suggests an automated scanning activity, possibly from a bot or script."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Access to /report.html from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "43.153.49.151",
+      "description": "Access to the root path from an iPhone user agent with a referer.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "170.106.165.186",
+      "description": "Initial GET request to the homepage of sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.166.239.145",
+      "description": "Single GET request to the homepage of www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "44.202.93.55",
+      "description": "Single GET request to the root path of sudo-cheese.org from a mobile device.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Identified potential scanning activity from IP 24.192.152.228.",
+  "grouped_activity": [
+    {
+      "ip": "24.192.152.228",
+      "description": "Multiple GET requests to /login and /favicon.ico within a short time frame, indicative of scanning or bot activity.",
+      "indicators": [
+        "/login",
+        "/favicon.ico"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is making repeated requests to common endpoints, which could be an attempt to identify vulnerabilities or gather information."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "50.220.121.249",
+      "description": "Single GET request to the homepage from an iPhone user agent.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Two GET requests were made to the same domain from different IPs, potentially indicating a bot or scanning activity.",
+  "grouped_activity": [
+    {
+      "ip": "43.130.105.21",
+      "description": "GET request to sudo-cheese.org",
+      "indicators": []
+    },
+    {
+      "ip": "43.167.245.18",
+      "description": "GET request to www.sudo-cheese.org",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 6 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "98.246.89.127",
+      "description": "Potential bot or scanning activity targeting the website.",
+      "indicators": [
+        {
+          "timestamp": "2026-03-02T13:50:22.650225",
+          "path": "/"
+        },
+        {
+          "timestamp": "2026-03-02T13:50:22.767591",
+          "path": "/style.css"
+        },
+        {
+          "timestamp": "2026-03-02T13:50:22.953363",
+          "path": "/apple-touch-icon-precomposed.png"
+        },
+        {
+          "timestamp": "2026-03-02T13:50:22.956800",
+          "path": "/apple-touch-icon.png"
+        },
+        {
+          "timestamp": "2026-03-02T13:50:22.958175",
+          "path": "/favicon.ico"
+        }
+      ]
+    },
+    {
+      "ip": "106.227.49.113",
+      "description": "Single request to the homepage.",
+      "indicators": [
+        {
+          "timestamp": "2026-03-02T13:55:27.576453",
+          "path": "/"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 6 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "98.246.89.127",
+      "description": "Potential bot or scanner activity targeting the website with multiple GET requests to common static files.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "170.106.187.106",
+      "description": "Scanning activity with a mobile user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "63.135.161.122",
+      "description": "Potential login attempt to WordPress admin panel.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 8 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address (63.155.49.149) are observed, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "63.155.49.149",
+      "description": "Potential scanning or bot activity with multiple GET requests to different resources on the website.",
+      "indicators": [
+        "/",
+        "/style.css",
+        "/favicon.ico",
+        "/apple-touch-icon-precomposed.png",
+        "/apple-touch-icon.png"
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated GET requests from a single IP address targeting various static resources on the website suggest automated activity, possibly from a bot or scanner."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.138.68.113",
+      "description": "Single GET request to the root path.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "180.153.236.37",
+      "description": "Potential bot or scanner activity detected.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "4.43.184.113",
+      "description": "Single GET request to the root path of sudo-cheese.org from a Chrome browser.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to the homepage from different IPs, potentially indicating scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "43.130.72.177",
+      "description": "GET request to sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "43.130.12.43",
+      "description": "GET request to www.sudo-cheese.org from an iPhone user agent.",
+      "indicators": []
+    },
+    {
+      "ip": "4.43.184.113",
+      "description": "GET request to sudo-cheese.org from a Chrome browser on Linux.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The activity shows multiple GET requests to the same domain from different IPs, which could be indicative of scanning or bot behavior."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 2 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Potential scanning activity from an IP address in India.",
+  "grouped_activity": [
+    {
+      "ip": "139.59.82.255",
+      "description": "Multiple GET requests to the root path and favicon.ico, suggesting a bot or scanner probing the website.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "8.134.236.192",
+      "description": "Single GET request to the homepage of www.sudo-cheese.org.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 3 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Two IPs are detected with potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "74.7.175.191",
+      "description": "Accessed /robots.txt, indicating a possible web crawler or automated tool.",
+      "indicators": []
+    },
+    {
+      "ip": "167.99.190.43",
+      "description": "Made multiple requests to the root path and favicon.ico, suggesting potential scanning activity.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": "The observed activities are consistent with automated tools or bots performing standard checks such as fetching robots.txt and favicon.ico."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+No new events.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "174.138.49.32",
+      "description": "Single GET request to the root path of sudo-cheese.org.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.130.3.120",
+      "description": "Single GET request to the root path.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "43.156.204.134",
+      "description": "Single GET request to the homepage of www.sudo-cheese.org from an iPhone.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 128.90.170.2 is performing multiple GET requests to various WordPress admin setup and installation paths, suggesting an automated scanning or brute-force attempt.",
+  "grouped_activity": [
+    {
+      "ip": "128.90.170.2",
+      "description": "Automated scanning of WordPress admin setup and installation paths.",
+      "indicators": [
+        "/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wordpress/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wp/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/new/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/old/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wp-admin/install.php?step=1&language=en_GB",
+        "/wordpress/wp-admin/install.php?step=1&language=en_GB",
+        "/wp/wp-admin/install.php?step=1&language=en_GB",
+        "/new/wp-admin/install.php?step=1&language=en_GB"
+      ]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of an automated tool or bot attempting to identify and exploit potential vulnerabilities in the WordPress installation."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 7 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests to WordPress admin setup and install pages from the same IP address, suggesting a potential automated scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "128.90.170.2",
+      "description": "Automated scanning of WordPress sites for vulnerabilities.",
+      "indicators": [
+        "/old/wp-admin/install.php?step=1&language=en_GB",
+        "/blog/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/test/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/test/wp-admin/install.php?step=1&language=en_GB",
+        "/shop/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/shop/wp-admin/install.php?step=1&language=en_GB"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP address is making multiple requests to various WordPress admin setup and install pages, which is a common behavior of automated tools used for scanning or exploiting vulnerabilities in WordPress installations."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 9 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 184.166.190.161 is exhibiting behavior consistent with a bot or automated scanning activity, repeatedly accessing the login page and the style.css file.",
+  "grouped_activity": [
+    {
+      "ip": "184.166.190.161",
+      "description": "Automated login attempts and requests for static files",
+      "indicators": [
+        {
+          "path": "/login",
+          "method": "POST"
+        },
+        {
+          "path": "/style.css",
+          "method": "GET"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated attempts to access the login page and style.css file suggest that this IP is likely part of a botnet or automated scanning tool."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 9 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 184.166.190.161 is exhibiting behavior consistent with a bot or automated scanning tool, repeatedly accessing the login page and other resources.",
+  "grouped_activity": [
+    {
+      "ip": "184.166.190.161",
+      "description": "Repetitive access to login pages and style.css files.",
+      "indicators": [
+        {
+          "timestamp": "2026-03-03T06:06:03.854745",
+          "activity": "GET /createacc.html"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:03.938594",
+          "activity": "GET /style.css"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:33.710764",
+          "activity": "POST /login"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:33.769504",
+          "activity": "GET /style.css"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:41.015338",
+          "activity": "GET /"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:44.025427",
+          "activity": "POST /login"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:46.495722",
+          "activity": "GET /"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:51.024044",
+          "activity": "POST /login"
+        },
+        {
+          "timestamp": "2026-03-03T06:06:53.064436",
+          "activity": "GET /"
+        }
+      ]
+    }
+  ],
+  "overall_explanation": "The observed activity suggests an automated process or bot attempting to log in multiple times, possibly for unauthorized access."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 184.166.190.161 exhibits repeated login attempts and requests for static resources, suggesting potential bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "184.166.190.161",
+      "description": "Repeated GET and POST requests to /login with variations in user agent strings.",
+      "indicators": [
+        "Multiple login attempts",
+        "Access to static resources like style.css"
+      ]
+    },
+    {
+      "ip": "124.156.157.91",
+      "description": "Single GET request for the homepage with a user agent string indicating an iPhone device.",
+      "indicators": [
+        "No repeated activity observed"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP 184.166.190.161 shows signs of automated login attempts, which could be indicative of a bot or malicious actor attempting unauthorized access."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 1 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "",
+  "grouped_activity": [
+    {
+      "ip": "13.220.230.49",
+      "description": "Single GET request to root path",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "The IP address 128.90.170.2 is exhibiting scanning behavior, attempting to access WordPress administration pages with various URL paths.",
+  "grouped_activity": [
+    {
+      "ip": "128.90.170.2",
+      "description": "Scanning for potential vulnerabilities in the sudo-cheese.org website by accessing different WordPress admin setup and install URLs.",
+      "indicators": [
+        "/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wordpress/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wp/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/new/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/wp-admin/install.php?step=1&language=en_GB",
+        "/wordpress/wp-admin/install.php?step=1&language=en_GB",
+        "/wp/wp-admin/install.php?step=1&language=en_GB"
+      ]
+    }
+  ],
+  "overall_explanation": "This IP is likely a bot or automated script attempting to find vulnerabilities in the WordPress installation."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 128.90.170.2 is exhibiting scanning behavior by repeatedly accessing WordPress admin setup and installation pages across different subdomains.",
+  "grouped_activity": [
+    {
+      "ip": "128.90.170.2",
+      "description": "Scanning for vulnerabilities in sudo-cheese.org's WordPress installations.",
+      "indicators": [
+        "/new/wp-admin/install.php?step=1&language=en_GB",
+        "/old/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/old/wp-admin/install.php?step=1&language=en_GB",
+        "/blog/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/blog/wp-admin/install.php?step=1&language=en_GB",
+        "/test/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/test/wp-admin/install.php?step=1&language=en_GB",
+        "/shop/wp-admin/setup-config.php?step=1&language=en_GB",
+        "/shop/wp-admin/install.php?step=1&language=en_GB"
+      ]
+    },
+    {
+      "ip": "184.166.190.161",
+      "description": "Accessing a registration page on www.sudo-cheese.org.",
+      "indicators": [
+        "/createacc.html"
+      ]
+    }
+  ],
+  "overall_explanation": "The IP 128.90.170.2 is likely part of a botnet or performing automated scanning for WordPress vulnerabilities across multiple subdomains. The other IP, 184.166.190.161, accessed a registration page on the site."
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 184.166.190.161 shows repeated login attempts with POST requests to /login and GET requests for the homepage, suggesting potential bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "184.166.190.161",
+      "description": "Repeated login attempts with POST requests to /login and GET requests for the homepage.",
+      "indicators": []
+    },
+    {
+      "ip": "124.156.157.91",
+      "description": "Single GET request to the homepage.",
+      "indicators": []
+    },
+    {
+      "ip": "13.220.230.49",
+      "description": "Single GET request to the homepage.",
+      "indicators": []
+    }
+  ],
+  "overall_explanation": ""
+}
+--------------------------
+Dashboard updated successfully.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 6 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "Multiple GET requests from the same IP address (128.223.223.35) are observed, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "128.223.223.35",
+      "description": "GET requests to various resources on the website (report.html, style.css, favicon.ico)",
+      "indicators": ["Multiple GET requests from a single IP", "Accessed multiple resources"]
+    }
+  ],
+  "overall_explanation": "The activity is indicative of automated scanning or bot behavior targeting the website."
+}
+--------------------------
+Dashboard updated successfully.
+No new events.
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 153.33.64.169 exhibits repeated GET and POST requests to the website, indicating potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "153.33.64.169",
+      "description": "Repeated GET and POST requests to the website with a mobile user agent.",
+      "indicators": [
+        {"timestamp": "2026-03-03T11:12:58.638073", "method": "GET", "path": "/report.html"},
+        {"timestamp": "2026-03-03T11:12:58.961645", "method": "GET", "path": "/style.css"},
+        {"timestamp": "2026-03-03T11:13:07.317329", "method": "GET", "path": "/report.html"},
+        {"timestamp": "2026-03-03T11:13:12.493348", "method": "GET", "path": "/"},
+        {"timestamp": "2026-03-03T11:13:17.497159", "method": "GET", "path": "/"},
+        {"timestamp": "2026-03-03T11:13:23.324792", "method": "POST", "path": "/login"},
+        {"timestamp": "2026-03-03T11:13:31.737178", "method": "POST", "path": "/login"}
+      ]
+    },
+    {
+      "ip": "44.202.86.3",
+      "description": "Single GET request to the login page with a mobile user agent.",
+      "indicators": [
+        {"timestamp": "2026-03-03T11:13:32.780301", "method": "GET", "path": "/login"}
+      ]
+    }
+  ],
+  "overall_explanation": "The activity from IP 153.33.64.169 suggests potential automated scanning or bot behavior, while the single request from IP 44.202.86.3 is less indicative of malicious intent."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+/home/host/Beehavior-inator/report.py:122: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  timestamp = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+Analyzing 10 events...
+----- LLM RAW OUTPUT -----
+{
+  "summary": "IP 153.33.64.169 exhibits repeated GET and POST requests to the website, suggesting potential scanning or bot activity.",
+  "grouped_activity": [
+    {
+      "ip": "153.33.64.169",
+      "description": "Repeated GET and POST requests to the website, possibly indicating a bot or scanner.",
+      "indicators": [
+        {"timestamp": "2026-03-03T11:12:58.638073", "method": "GET", "path": "/report.html"},
+        {"timestamp": "2026-03-03T11:12:58.961645", "method": "GET", "path": "/style.css"},
+        {"timestamp": "2026-03-03T11:13:07.317329", "method": "GET", "path": "/report.html"},
+        {"timestamp": "2026-03-03T11:13:12.493348", "method": "GET", "path": "/"},
+        {"timestamp": "2026-03-03T11:13:17.497159", "method": "GET", "path": "/"},
+        {"timestamp": "2026-03-03T11:13:23.324792", "method": "POST", "path": "/login"},
+        {"timestamp": "2026-03-03T11:13:31.737178", "method": "POST", "path": "/login"}
+      ]
+    },
+    {
+      "ip": "44.202.86.3",
+      "description": "Single GET request to the login page, which could be part of a broader scanning activity.",
+      "indicators": [
+        {"timestamp": "2026-03-03T11:13:32.780301", "method": "GET", "path": "/login"}
+      ]
+    }
+  ],
+  "overall_explanation": "The repeated GET and POST requests from the same IP address suggest that it might be a bot or scanner probing the website for vulnerabilities."
+}
+--------------------------
+Traceback (most recent call last):
+  File "/home/host/Beehavior-inator/report.py", line 213, in <module>
+    main()
+  File "/home/host/Beehavior-inator/report.py", line 199, in main
+    final_html = render_dashboard(analysis)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 126, in render_dashboard
+    indicators = "".join(
+                 ^^^^^^^^
+  File "/home/host/Beehavior-inator/report.py", line 127, in <genexpr>
+    f"<li>{html.escape(i)}</li>"
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/html/__init__.py", line 19, in escape
+    s = s.replace("&", "&amp;") # Must be done first!
+        ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'replace'
+INFO: Analysing 40 event(s)...
+ERROR: LLM response parse error: Expecting value: line 1 column 1 (char 0)
+WARNING: LLM returned nothing — report not updated.
+INFO: Analysing 3 event(s)...
+INFO: Dashboard updated successfully.
+INFO: Analysing 3 event(s)...
+INFO: Dashboard updated successfully.
+INFO: Analysing 3 event(s)...
+INFO: Dashboard updated successfully.
