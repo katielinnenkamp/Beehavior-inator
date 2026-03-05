@@ -119,7 +119,8 @@ a {color: #93c5fd; }
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 20px;
   margin-top: 20px;
 }
