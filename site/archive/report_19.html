@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeypot Threat Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="archive-page">
+    <div class="top-left">
+      <a class="back-button" href="/">← Home</a>
+    </div>
+
+    <div class="dashboard-content">
+
+      <h1>Honeypot Threat Dashboard</h1>
+      <p class="subtitle">Generated: 2026-03-05 18:05:26 UTC</p>
+
+      <div class="dashboard-grid">
+
+        <div class="home-container wide" style="grid-column: 1;">
+          <h2>Summary</h2>
+          <p>The attacker is likely probing for WordPress vulnerabilities and misconfigurations, possibly using a script or tool that automates common checks such as XML-RPC endpoints and wp-includes paths. They are in the US and their behavior suggests they are not targeting a specific site but rather scanning multiple sites for potential WordPress installations.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 2;">
+          <h2>Grouped Activity</h2>
+          <div class="activity-grid">
+            <div class="ip-block"><div class="ip-addr">124.198.132.28</div><p class="ip-meta">US &mdash; 2026-03-04T14:17:32Z (converted to PST: 2026-03-04T07:17:32)</p><p class="ip-desc">Probing for WordPress vulnerabilities by accessing non-existent paths and XML-RPC endpoints.</p><ul class="indicators"><li>GET /wp-includes/wlwmanifest.xml at 14:17:32</li><li>GET /xmlrpc.php?rsd at 14:17:32</li><li>GET /blog/wp-includes/wlwmanifest.xml at 14:17:32</li><li>GET /web/wp-includes/wlwmanifest.xml at 14:17:32</li></ul></div>
+          </div>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>Expansion Notes</h2>
+          <p>The attacker&#x27;s behavior is consistent with a WordPress scanner. They are likely using a tool that checks for common misconfigurations and vulnerabilities in WordPress installations. To further entice them, we should add more convincing bait such as fake wp-config.php files or a fake admin dashboard.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>HTML Additions</h2>
+          <p>The LLM doesn't have any access to the current website. This is due to constraints of the size of the current LLM. If you're able to utilize a bigger system, feel free to adjust the model and prompts as need be.</p>
+          <pre class="html-additions">&lt;div id=&#x27;wp-admin&#x27;&gt;&lt;h1&gt;Welcome to the WordPress Admin Panel&lt;/h1&gt;&lt;p&gt;Your username is: admin&lt;/p&gt;&lt;p&gt;Your password is: honeybot123&lt;/p&gt;&lt;/div&gt;
+&lt;div id=&#x27;wp-config&#x27;&gt;&lt;pre&gt;&lt;?php
+// This file should not be accessed directly.
+if (!defined(&#x27;ABSPATH&#x27;)) {
+    exit;
+}
+// Database configuration
+$blogname = &#x27;Sudo Cheese&#x27;;
+$dbuser   = &#x27;honeybot_user&#x27;;
+$dbpass   = &#x27;s3cr3t_p4ssw0rd&#x27;;
+&lt;/pre&gt;&lt;/div&gt;</pre>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 20px;">
+        <a href="/archive.html" class="btn-archive">View Archive</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

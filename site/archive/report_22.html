@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeypot Threat Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="archive-page">
+    <div class="top-left">
+      <a class="back-button" href="/">← Home</a>
+    </div>
+
+    <div class="dashboard-content">
+
+      <h1>Honeypot Threat Dashboard</h1>
+      <p class="subtitle">Generated: 2026-03-05 16:35:51 UTC</p>
+
+      <div class="dashboard-grid">
+
+        <div class="home-container wide" style="grid-column: 1;">
+          <h2>Summary</h2>
+          <p>The attacker is likely probing for WordPress vulnerabilities, specifically looking for the XML-RPC endpoint which can be used to execute arbitrary code or gain unauthorized access. The use of multiple paths indicates a methodical approach rather than an automated scan, suggesting a potential human attacker with knowledge of common WordPress probe techniques.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 2;">
+          <h2>Grouped Activity</h2>
+          <div class="activity-grid">
+            <div class="ip-block"><div class="ip-addr">124.198.132.28</div><p class="ip-meta">United States &mdash; 2026-03-04T12:04:05Z (PST 2026-03-04 04:04:05)</p><p class="ip-desc">Probing for XML-RPC endpoint and other WordPress-related paths.</p><ul class="indicators"><li>GET /xmlrpc.php?rsd</li><li>GET /blog/wp-includes/wlwmanifest.xml</li><li>GET /web/wp-includes/wlwmanifest.xml</li><li>GET /wordpress/wp-includes/wlwmanifest.xml</li><li>GET /website/wp-includes/wlwmanifest.xml</li></ul></div>
+          </div>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>Expansion Notes</h2>
+          <p>The attacker is likely looking for WordPress vulnerabilities. Adding a fake XML-RPC endpoint and other common WordPress probe paths will entice them further into the honeypot.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>HTML Additions</h2>
+          <p>The LLM doesn't have any access to the current website. This is due to constraints of the size of the current LLM. If you're able to utilize a bigger system, feel free to adjust the model and prompts as need be.</p>
+          <pre class="html-additions">&lt;div id=&#x27;wp-honeytrap&#x27;&gt;&lt;h1&gt;WordPress Configuration&lt;/h1&gt;&lt;pre&gt;&lt;?php\n// This file contains sensitive information and should not be accessed directly.\n\$db_host = &#x27;localhost&#x27;;\n\$db_user = &#x27;root&#x27;;\n\$db_pass = &#x27;password&#x27;;\n\$table_prefix = &#x27;wp_&#x27;;\n?&gt;&lt;/pre&gt;&lt;/div&gt;\n&lt;div id=&#x27;wp-honeytrap&#x27;&gt;&lt;h1&gt;WordPress Plugins&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;SEO by Yoast (version 15.0)&lt;/li&gt;&lt;li&gt;Jetpack (version 8.3.2)&lt;/li&gt;&lt;li&gt;WooCommerce (version 7.6.0)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;\n&lt;div id=&#x27;wp-honeytrap&#x27;&gt;&lt;h1&gt;WordPress Themes&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;Sage (version 9.5.4)&lt;/li&gt;&lt;li&gt;Astra (version 3.8.2)&lt;/li&gt;&lt;li&gt;Catapult (version 2.7.0)&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;\n&lt;div id=&#x27;wp-honeytrap&#x27;&gt;&lt;h1&gt;WordPress Settings&lt;/h1&gt;&lt;pre&gt;&lt;?php\n// This file contains sensitive information and should not be accessed directly.\n\$site_url = &#x27;https://sudo-cheese.org&#x27;;\n\$home_url = &#x27;https://sudo-cheese.org&#x27;;\n\$admin_email = &#x27;admin@sudo-cheese.org&#x27;;\n\$timezone_string = &#x27;America/Los_Angeles&#x27;;\n?&gt;&lt;/pre&gt;&lt;/div&gt;</pre>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 20px;">
+        <a href="/archive.html" class="btn-archive">View Archive</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
