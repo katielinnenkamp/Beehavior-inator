@@ -36,7 +36,7 @@ This server is hosted and maintained by the team. Traffic sent to these domains 
 The server will start with the port, logging option, and server handlers defined in config.json.
 
 
-Logs captured from running this server can be found in the logs/ directory locally or .https://www.sudo-cheese.org/report.html
+Logs captured from running this server can be found in the logs/ directory locally or https://www.sudo-cheese.org/report.html
 
 
 ## Open Source Software Used
