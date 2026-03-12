@@ -1,70 +1,112 @@
-It is currently set to our webpage
-
-How to run quickly: 
-
-1. sudo pip3 install -r requirements.txt
-2. source .venv/bin/activate
-3. python3 start.py --config config.json
+# Beehavior-Inator
 
 
+This project is a web-based honeypot built using the HoneyHTTPD framework. The Beehavior_inator honeypot simulates a web service and records HTTP requests from users. Interactions with the service are recorded and consistently analyzed for potential attackers and normal traffic behavior. 
 
 
+HoneyHTTPD framework servers are the core web server, while our implementation extended it to run as a publicly accessible honeypot.
 
-# HoneyHTTPD
 
-![HoneyHTTPD Logo](honeyhttpd.png)
+## Live Deployment
 
-HoneyHTTPD is a Python-based web server framework. It makes it easy to set up fake web servers and web services, respond with the precise data you want, and record the requests given to it. HoneyHTTPD allows you to build your responses with Python at the HTTP protocol level to imitate almost any server or service you want. No complex setups and proxies required!
 
-This information can be logged to different places, the currently supported outputs are:
-* Files
-* ElasticSearch
-* Stdout
-* AWS S3
+The honeypot is deployed at:
 
-HoneyPoke supports both Python 2.7 (I know its EOL, but just in case) and Python 3.
 
-## Installation
+https://www.sudo-cheese.org/
+
+
+This server is hosted and maintained by the team. Traffic sent to these domains is handled by the Beehavior-Inator honeyport server and is logged for analysis.
+
+
+## Installation and Setup For Local Running
+
 
 1. Clone or download this repo
-2. Install dependencies: 
-    * Python 2: `sudo pip install -r requirements.txt` 
-    * Python 3: `sudo pip3 install -r requirements.txt` 
-3. Be sure the `large` and `logs` directories are writeable by the user and group you plan to have HoneyHTTPD running under.
+2. Install dependencies:
+   * Python 2: `sudo pip install -r requirements.txt`
+   * Python 3: `sudo pip3 install -r requirements.txt`
+3. Activate a virtual environment via this command:
+   * `source .venv/bin/activate`
+4. Run HoneyHTTPD with:
+   * Python 2 `sudo python2 start.py --config config.json`
+   * Python 3 `sudo python3 start.py --config config.json`
 
-## Setup
 
-1. Copy `config.json.default`  to `config.json` Modify the config file. 
-    * `loggers` enables and disables loggers. This done with the `active` key under the respective loggers. Some may need extra configuation, which is in the `config` key.
-    * `servers` contains a list of servers you want to run. Each entry has the following keys:
-        * `handler` indicates the server module in the `servers` directory to use for that port
-        * `mode` is either `http` or `https` which indicates if the server should return normal HTTP or HTTPS
-        * `port` is the port to run on 
-        * `domain` indicates the "domain" this server is running 
-        * `timeout` is the timeout for requests 
-        * `cert_path` is only required when in `https` mode. This is the path to the server certificate in the PEM format.
-    * `user` is the user you want the script to drop privileges to
-    * `group` is the group you want the script to drop privileges to
-2. Run HoneyHTTPD with:
-    * Python 2 `sudo python2 start.py --config config.json`
-    * Python 3 `sudo python3 start.py --config config.json`
+The server will start with the port, logging option, and server handlers defined in config.json.
 
-## Making Server Modules
 
-Server modules live in the `servers` directory. They are classes that handle the HTTP requests. These modules must inherit from the `Server` class in `lib.server`. The class name and the name of the server module file must be the same. Modules can inherit from other server modules to build on their functionality.
+Logs captured from running this server can be found in the logs/ directory locally or https://www.sudo-cheese.org/report.html
+
+
+## Open Source Software Used
+
+
+This project builds upon HoneyHTTPD, an open source python framework. Specifically used for creating fake honeypots and web servers.
+
+
+This framework provides:
+* HTTPS server functionality
+* Modular server handlers
+* logging mechanisms
+
+
+HoneyHTTPD repository:
+https://github.com/bocajspear1/honeyhttpd
+
+
+## Software Developed
+
+
+* Custom config.json:
+   - which ports the honeypots liston on
+   - which server modules are used
+   - log behavior 
+   - HTTPS support
+* Custom Webpage:
+   - Designed to appear as a normal web server, but allows us to capture requests from users, bots, attackers, and scanners.
+* Log Parsing
+   - Developed a scratch that helps process the honeypot logs before they are interpreted by LLM.
+   - Include source IP, timestamp, HTTP request method, request path
+   - Output stored as events.jsonl
+
+
+
+
+## Sever and LLM Small explanation maybe
+
+
+## Technologies and Platforms Used
+
+
+* Python3
+* HoneyHTTPD
+* SEVER AND LLM THINGS HERE
+
+
+
 
 ## Generating SSL certificates
+
 
 ```
 openssl req -new -x509 -keyout server_key.pem -out server_cert.pem -days 365 -nodes
 ```
 
+
 From [here](https://gist.github.com/dergachev/7028596).
+
 
 ## Contributing
 
+
 Go at it! Open an issue, make a pull request, fork it, etc.
+
 
 ## License
 
+
 This project is licensed under the Mozilla Public License, v2.0 (formerly GPL 3.0)
+
+
+
