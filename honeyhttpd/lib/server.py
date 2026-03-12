@@ -122,9 +122,12 @@ class HTTPHandler(BaseHTTPRequestHandler, object):
         
         code, extra = self.on_request(self)
         
-        self.server.client_address = self.client_address[0]
+        forwarded_for = (self.headers.get('Cf-Connecting-Ip') or
+                 self.headers.get('X-Forwarded-For') or
+                 self.headers.get('X-Real-IP'))
+        self.server.client_address = forwarded_for.split(',')[0].strip() if forwarded_for else self.client_address[0]
         self.server.client_port = self.client_address[1]
-
+        
         if code != None:
             self.send_error(code, extra)
             return
@@ -141,15 +144,18 @@ class HTTPHandler(BaseHTTPRequestHandler, object):
         else:
             res_headers, res_data = self.send_success_response(data, headers)
 
-        self.on_complete(self.client_address, code, req_headers, res_headers, self.get_raw_request(), res_data)
+        self.on_complete((self.server.client_address, self.server.client_port), code, req_headers, res_headers, self.get_raw_request(), res_data)
 
     # On POST requests
     def do_POST(self):
 
         code, extra = self.on_request(self)
 
-        self.server.client_address = self.client_address[0]
-        self.server.client_port = self.client_address[1]
+        forwarded_for = (self.headers.get('Cf-Connecting-Ip') or
+                 self.headers.get('X-Forwarded-For') or
+                 self.headers.get('X-Real-IP'))
+        self.server.client_address = forwarded_for.split(',')[0].strip() if forwarded_for else self.client_address[0]
+        self.server.client_port = self.client_address[1]        
 
         if code != None:
             self.send_error(code, extra)
@@ -175,8 +181,8 @@ class HTTPHandler(BaseHTTPRequestHandler, object):
             res_headers, res_data = self.send_error(code, data)
         else:
             res_headers, res_data = self.send_success_response(data, headers)
-
-        self.on_complete(self.client_address, code, req_headers, res_headers, self.get_raw_request(), res_data)
+        
+        self.on_complete((self.server.client_address, self.server.client_port), code, req_headers, res_headers, self.get_raw_request(), res_data)
 
 class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
     daemon_threads = True

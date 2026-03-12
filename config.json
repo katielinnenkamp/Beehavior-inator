@@ -23,8 +23,8 @@
         }
     },
     "servers" : [
-        {"handler": "LoginSiteServer", "mode": "https", "port": 8443, "domain": "example.com", "timeout": 10, "cert_path": "server_cert.pem", "key_path": "server_key.pem"},
-        {"handler": "LoginSiteServer", "mode": "http", "port": 8080, "domain": "example.com", "timeout": 10}
+        {"handler": "LoginSiteServer", "mode": "https", "port": 8443, "domain": "sudo-cheese.org", "timeout": 10, "cert_path": "server_cert.pem", "key_path": "server_key.pem"},
+        {"handler": "LoginSiteServer", "mode": "http", "port": 8080, "domain": "sudo-cheese.org", "timeout": 10}
     ],
     "user": "",
     "group": ""

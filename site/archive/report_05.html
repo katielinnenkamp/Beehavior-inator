@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeypot Threat Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="archive-page">
+    <div class="top-left">
+      <a class="back-button" href="/">← Home</a>
+    </div>
+
+    <div class="dashboard-content">
+
+      <h1>Honeypot Threat Dashboard</h1>
+      <p class="subtitle">Generated: 2026-03-06 03:06:39 UTC</p>
+
+      <div class="dashboard-grid">
+
+        <div class="home-container wide" style="grid-column: 1;">
+          <h2>Summary</h2>
+          <p>The attackers are using a SiteCheckerBotCrawler to perform a broad scan of the sudo-cheese.org domain, likely looking for any exposed configurations or endpoints that could be exploited. The crawler is making repeated GET requests to the root path, suggesting it&#x27;s part of an automated scanner suite designed to quickly identify potential vulnerabilities in web applications and services.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 2;">
+          <h2>Grouped Activity</h2>
+          <div class="activity-grid">
+            <div class="ip-block"><div class="ip-addr">78.47.62.212</div><p class="ip-meta">DE (Germany) &mdash; 2026-03-04T21:15:19Z</p><p class="ip-desc">Repeated GET requests to the root path using SiteCheckerBotCrawler, possibly probing for any exposed configurations or endpoints.</p><ul class="indicators"><li>GET / at 21:15:19</li><li>GET / at 21:15:19</li></ul></div>
+<div class="ip-block"><div class="ip-addr">91.99.217.172</div><p class="ip-meta">DE (Germany) &mdash; 2026-03-04T21:15:19Z</p><p class="ip-desc">Repeated GET requests to the root path using SiteCheckerBotCrawler, possibly probing for any exposed configurations or endpoints.</p><ul class="indicators"><li>GET / at 21:15:19</li><li>GET / at 21:15:19</li></ul></div>
+<div class="ip-block"><div class="ip-addr">167.235.227.57</div><p class="ip-meta">DE (Germany) &mdash; 2026-03-04T21:15:19Z</p><p class="ip-desc">Repeated GET requests to the root path using SiteCheckerBotCrawler, possibly probing for any exposed configurations or endpoints.</p><ul class="indicators"><li>GET / at 21:15:19</li><li>GET / at 21:15:19</li></ul></div>
+          </div>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>Expansion Notes</h2>
+          <p>Given the repeated GET requests and the use of a known crawler, it&#x27;s likely that these IPs are part of a larger botnet. To further entice them, we should add more convincing bait related to common exposed configurations and endpoints.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>HTML Additions</h2>
+          <p>The LLM doesn't have any access to the current website. This is due to constraints of the size of the current LLM. If you're able to utilize a bigger system, feel free to adjust the model and prompts as need be.</p>
+          <pre class="html-additions">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&#x27;en&#x27;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#x27;UTF-8&#x27;&gt;
+    &lt;title&gt;Configurations&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Our Configurations Page!&lt;/h1&gt;
+    &lt;p&gt;Please note, this is a honeypot and should not be used for any real-world purposes.&lt;/p&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;.env File&lt;/h2&gt;
+        &lt;pre&gt;&lt;code&gt;
+            DB_HOST=example_host
+            DB_USER=admin
+            DB_PASS=super_secret_password
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;API Keys&lt;/h2&gt;
+        &lt;pre&gt;&lt;code&gt;
+            API_KEY_1=abc123def456
+            API_KEY_2=ghj789klm012
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;SSH Banner&lt;/h2&gt;
+        &lt;p&gt;Welcome to sudo-cheese.org SSH server. Use with caution.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;Cron Jobs&lt;/h2&gt;
+        &lt;pre&gt;&lt;code&gt;
+            0 * * * * /usr/bin/php /var/www/html/honeypot.php
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;ETC/Passwd&lt;/h2&gt;
+        &lt;p&gt;User:admin, Password:password123 (not real)&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&#x27;config-section&#x27;&gt;
+        &lt;h2&gt;AWS Credentials&lt;/h2&gt;
+        &lt;pre&gt;&lt;code&gt;
+            AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+            AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 20px;">
+        <a href="/archive.html" class="btn-archive">View Archive</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

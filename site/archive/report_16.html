@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeypot Threat Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="archive-page">
+    <div class="top-left">
+      <a class="back-button" href="/">← Home</a>
+    </div>
+
+    <div class="dashboard-content">
+
+      <h1>Honeypot Threat Dashboard</h1>
+      <p class="subtitle">Generated: 2026-03-05 19:36:36 UTC</p>
+
+      <div class="dashboard-grid">
+
+        <div class="home-container wide" style="grid-column: 1;">
+          <h2>Summary</h2>
+          <p>The attackers are likely using automated tools to scan for potential vulnerabilities, possibly targeting WordPress installations given the attempt at a non-standard path (wlwmanifest.xml). They may also be probing for common web server and application paths. The repeated GET requests from the same IP addresses suggest these could be part of a botnet or automated scanning tool.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 2;">
+          <h2>Grouped Activity</h2>
+          <div class="activity-grid">
+            <div class="ip-block"><div class="ip-addr">124.198.132.28</div><p class="ip-meta">US &mdash; 2026-03-04T14:17:33Z (PST 2026-03-04T06:17:33)</p><p class="ip-desc">Scanning for potential WordPress vulnerabilities using non-standard paths.</p><ul class="indicators"><li>GET /sito/wp-includes/wlwmanifest.xml</li></ul></div>
+<div class="ip-block"><div class="ip-addr">43.134.141.244</div><p class="ip-meta">SG &mdash; 2026-03-04T14:47:15Z (PST 2026-03-04T06:47:15)</p><p class="ip-desc">Browsing the main page of the site.</p><ul class="indicators"><li>GET /</li></ul></div>
+<div class="ip-block"><div class="ip-addr">43.130.139.177</div><p class="ip-meta">US &mdash; 2026-03-04T15:01:12Z (PST 2026-03-04T07:01:12)</p><p class="ip-desc">Browsing the main page of the site.</p><ul class="indicators"><li>GET /</li></ul></div>
+<div class="ip-block"><div class="ip-addr">68.5.71.28</div><p class="ip-meta">US &mdash; 2026-03-04T16:07:32Z (PST 2026-03-04T08:07:32) and 2026-03-04T16:07:34Z (PST 2026-03-04T08:07:34)</p><p class="ip-desc">Browsing the main page of the site.</p><ul class="indicators"><li>GET /</li></ul></div>
+<div class="ip-block"><div class="ip-addr">43.155.27.244</div><p class="ip-meta">HK &mdash; 2026-03-04T17:03:46Z (PST 2026-03-04T09:03:46)</p><p class="ip-desc">Browsing the main page of the site.</p><ul class="indicators"><li>GET /</li></ul></div>
+          </div>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>Expansion Notes</h2>
+          <p>Given the repeated attempts and the use of non-standard paths, it&#x27;s likely that these IPs are part of a botnet. To further entice them, we can add more convincing WordPress-specific bait like fake wp-config.php files or a fake admin dashboard.</p>
+        </div>
+
+        <div class="home-container wide" style="grid-column: 1 / 3;">
+          <h2>HTML Additions</h2>
+          <p>The LLM doesn't have any access to the current website. This is due to constraints of the size of the current LLM. If you're able to utilize a bigger system, feel free to adjust the model and prompts as need be.</p>
+          <pre class="html-additions">&lt;div id=&#x27;wp-admin&#x27;&gt;&lt;h1&gt;WordPress Admin Dashboard&lt;/h1&gt;&lt;p&gt;Welcome to the WordPress admin panel!&lt;/p&gt;&lt;form method=&#x27;post&#x27; action=&#x27;#&#x27;&gt;&lt;label for=&#x27;username&#x27;&gt;Username:&lt;/label&gt;&lt;input type=&#x27;text&#x27; name=&#x27;username&#x27; id=&#x27;username&#x27;/&gt;&lt;br&gt;&lt;label for=&#x27;password&#x27;&gt;Password:&lt;/label&gt;&lt;input type=&#x27;password&#x27; name=&#x27;password&#x27; id=&#x27;password&#x27;/&gt;&lt;button type=&#x27;submit&#x27;&gt;Login&lt;/button&gt;&lt;/form&gt;&lt;/div&gt;
+&lt;div id=&#x27;wp-config&#x27;&gt;&lt;pre&gt;&lt;?php
+// This is a fake wp-config.php file
+$wpdb-&gt;dbuser = &#x27;admin&#x27;;
+$wpdb-&gt;dbpass = &#x27;123456&#x27;;
+$wpdb-&gt;dbname = &#x27;sudo_cheese&#x27;;
+$secret_key = &#x27;super_secret_key&#x27;;
+&lt;/pre&gt;&lt;/div&gt;</pre>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 20px;">
+        <a href="/archive.html" class="btn-archive">View Archive</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
