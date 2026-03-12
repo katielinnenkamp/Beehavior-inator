@@ -8,51 +8,47 @@ from datetime import datetime, timezone
 from pathlib import Path
 import requests
 
-#all paths, which woops
-LOG_FILE = Path("/home/host/Beehavior-inator/parsed/summary.jsonl")
-STATE_FILE = Path("/home/host/Beehavior-inator/llm/honeypot_state.json")
-TEMPLATE_FILE = Path("/home/host/Beehavior-inator/llm/template.html")
-OUTPUT_FILE = Path("/home/host/Beehavior-inator/site/report.html")
-ARCHIVE_DIR = Path("/home/host/Beehavior-inator/site/archive")
-LLM_LOG_FILE = Path("/home/host/Beehavior-inator/llm/honeybot.log")
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "honeybot"
-MAX_EVENTS = 6
-LLM_TIMEOUT = 1800  #in seconds, adjust to longer as need be, same for max events
-IGNORED_IPS = {"63.155.49.149"}
+#all paths
+BASE_DIR = Path(__file__).resolve().parent
+LOG_FILE = BASE_DIR / "parsed/summary.jsonl"
+OFFSET_FILE = BASE_DIR / "llm/honeypot_state.json"
+TEMPLATE_FILE = BASE_DIR / "llm/template.html"
+OUTPUT_FILE = BASE_DIR / "site/report.html"
+ARCHIVE_DIR = BASE_DIR / "site/archive"
+LLM_LOG_FILE = BASE_DIR / "llm/honeybot.log"
+IGNORED_IPS = {"63.155.49.149", "127.0.0.1"} #ignore certain ips, this way it ignores the your own, so shh
 
+#llm setup
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODEL = "honeybot" #uses qwen with custom prompt and parameters
+MAX_EVENTS = 6
+LLM_TIMEOUT = 600  #in seconds, adjust to longer as need be, same for max events
+
+#log setup 
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
-
-# stdout — INFO and above only
-stream = logging.StreamHandler()
-stream.setLevel(logging.INFO)
-stream.setFormatter(logging.Formatter("%(levelname)s: %(message)s"))
-log.addHandler(stream)
-
-# file — everything including raw LLM output
-file_handler = logging.FileHandler(LLM_LOG_FILE)
-file_handler.setLevel(logging.DEBUG)
-file_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s"))
-log.addHandler(file_handler)
+handler = logging.FileHandler(LLM_LOG_FILE)
+handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s"))
+log.addHandler(handler)
 
 #Handles open, read, and offset persistence for the JSONL event log
 class LogReader:
     def __init__(self, path):
         self.path = path
         self.offset = 0
-        self._load_state()
+        self.load_offset()
 
-    def _load_state(self):
-        if STATE_FILE.exists():
+    def load_offset(self):
+        if OFFSET_FILE.exists():
             try:
-                self.offset = json.loads(STATE_FILE.read_text()).get("offset", 0)
+                self.offset = json.loads(OFFSET_FILE.read_text()).get("offset", 0)
             except Exception:
                 self.offset = 0
 
-    def _save_state(self):
-        STATE_FILE.write_text(json.dumps({"offset": self.offset}))
+    def save_offset(self):
+        OFFSET_FILE.write_text(json.dumps({"offset": self.offset}))
 
+    #gets new events, reads each line till end of event and then appends it to what will be fed to the LLM
     def read_new(self):
         if not self.path.exists():
             return []
@@ -74,7 +70,7 @@ class LogReader:
 
         return events
 
-# Prompt is lean now — context, schema, and rules are baked into the honeybot Modelfile
+#minimal prompt utilizes modelfile
 _PROMPT_TEMPLATE = """\
 Analyze the following honeypot events and respond per your instructions. \
 You must respond ONLY with a valid JSON object. No markdown, no headers, no commentary. \
@@ -84,15 +80,15 @@ Events:
 {events_json}
 """
 
+#extract, fix the llm output from json if need be
 def extract_and_fix_json(raw: str):
-    """Attempt to parse JSON, with a repair pass if it fails."""
     raw = re.sub(r"```json|```", "", raw).strip()
     try:
         return json.loads(raw)
     except json.JSONDecodeError as e:
         log.warning("Initial JSON parse failed (%s), attempting repair...", e)
 
-    # extract html_additions value and re-encode it safely
+    #extract html_additions value and encodes it safely
     match = re.search(
         r'"html_additions"\s*:\s*[\'"](.+?)[\'"](\s*[},])',
         raw,
@@ -108,10 +104,9 @@ def extract_and_fix_json(raw: str):
         log.error("Repair failed: %s", e)
         raise
 
+
 def query_llm(events: list[dict]):
-    """Send events to the local Ollama instance and parse the JSON response."""
     prompt = _PROMPT_TEMPLATE.format(events_json=json.dumps(events, indent=2))
-    raw = None
 
     try:
         resp = requests.post(
@@ -124,31 +119,35 @@ def query_llm(events: list[dict]):
         log.info("LLM raw output:\n%s", raw)
         return extract_and_fix_json(raw)
 
-    except requests.RequestException as exc:
+    except (requests.RequestException,json.JSONDecodeError, KeyError) as exc:
         log.error("LLM request failed: %s", exc)
-    except (json.JSONDecodeError, KeyError) as exc:
-        log.error("LLM response parse error: %s", exc)
-        log.error("Raw output was:\n%s", raw or "unavailable")
 
     return None
 
-def _render_ip_blocks(grouped: list[dict]) -> str:
-    def indicators(group):
-        return "".join(
-            f'<li>{html.escape(str(item) if not isinstance(item, dict) else " — ".join(f"{k}: {v}" for k, v in item.items()))}</li>'
-            for item in group.get("indicators", [])
-        )
+#parses and joins all events
+def indicators(group):
+    parts = []
+    for item in group.get("indicators", []):
+        if isinstance(item, dict):
+            text = " — ".join(f"{k}: {v}" for k, v in item.items())
+        else:
+            text = str(item)
+        parts.append(f"<li>{html.escape(text)}</li>")
+    return "".join(parts)
 
+#compresses all info back together after parsing and analysing
+def render_ip(grouped: list[dict]):
     return "\n".join(
         f'<div class="ip-block">'
         f'<div class="ip-addr">{html.escape(group.get("ip", "Unknown"))}</div>'
-        f'<p class="ip-meta">{html.escape(group.get("country_of_origin", ""))} &mdash; {html.escape(group.get("time_occurred", ""))}</p>'
+        f'<p class="ip-meta">{html.escape(str(group.get("country_of_origin", "")))} &mdash; {html.escape(str(group.get("time_occurred", "")))}</p>'
         f'<p class="ip-desc">{html.escape(group.get("description", ""))}</p>'
         f'<ul class="indicators">{indicators(group)}</ul>'
         f'</div>'
         for group in grouped
     )
 
+#compiles everything onto the template.html file, better usage than having the llm create files
 def render_report(analysis: dict):
     """Load the template and substitute all placeholders."""
     template = TEMPLATE_FILE.read_text(encoding="utf-8")
@@ -156,7 +155,7 @@ def render_report(analysis: dict):
     replacements = {
         "{{TIMESTAMP}}":        datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "{{SUMMARY}}":          html.escape(analysis.get("summary", "")),
-        "{{GROUPED_ACTIVITY}}": _render_ip_blocks(analysis.get("grouped_activity", [])),
+        "{{GROUPED_ACTIVITY}}": render_ip(analysis.get("grouped_activity", [])),
         "{{EXPANSION_NOTES}}":  html.escape(analysis.get("expansion_notes", "")),
         "{{HTML_ADDITIONS}}":   html.escape(analysis.get("html_additions", "")),
     }
@@ -183,7 +182,7 @@ def main():
         reader.offset = start_offset
         return
 
-    # rotate archive slots 1-24, dropping oldest
+    #rotate archive slots 1-24 and will drop oldest
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
     for i in range(23, 0, -1):
         src = ARCHIVE_DIR / f"report_{i:02d}.html"
@@ -192,7 +191,6 @@ def main():
     if OUTPUT_FILE.exists():
         OUTPUT_FILE.rename(ARCHIVE_DIR / "report_01.html")
 
-    # atomic write: temp file + rename avoids corrupt half-written report
     tmp = OUTPUT_FILE.with_suffix(".tmp")
     try:
         tmp.write_text(render_report(analysis), encoding="utf-8")
@@ -203,7 +201,7 @@ def main():
         reader.offset = start_offset
         raise
 
-    reader._save_state()
+    reader.save_offset()
     log.info("Dashboard updated successfully.")
 
 if __name__ == "__main__":

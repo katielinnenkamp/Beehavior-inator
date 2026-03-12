@@ -4,11 +4,6 @@ config.json
 upload.*
 venv/
 docs/build/
-logs/*.log
 *.pem
 .vscode/
 **/.DS_Store
-*.bak
-*.offset
-*.log
-parsed/
