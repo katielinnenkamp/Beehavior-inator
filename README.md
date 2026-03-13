@@ -15,28 +15,59 @@ The honeypot is deployed at:
 
 https://www.sudo-cheese.org/
 
+The honeypot reports can be found at:
+
+
+https://www.sudo-cheese.org/report.html
+
+
+The website pages are:
+- archive.html
+- createacc.html
+- report.html
+- standin.html
+- 90.html
+- pages/*
+- archive/*
+
 
 This server is hosted and maintained by the team. Traffic sent to these domains is handled by the Beehavior-Inator honeyport server and is logged for analysis.
 
+## System Requirements
 
-## Installation and Setup For Local Running
+
+To run the current project exactly, the general recommendations is having an server with the following:
+   * 16 GB RAM
+   * Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz
+   * Integrated Intel® HD Graphics 610/630
+
+If you have batter specs, you can change out the LLM model for one with more computing power. This is what's hosting the current project and thus our bare minimum.
+
+## Installation and Setup For Local Running on an Ubuntu Server
 
 
 1. Clone or download this repo
-2. Install dependencies:
+2. Setup a cloudflared tunnel following 
+   * https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/create-remote-tunnel/
+3. Install dependencies:
    * Python 2: `sudo pip install -r requirements.txt`
    * Python 3: `sudo pip3 install -r requirements.txt`
-3. Activate a virtual environment via this command:
+   *  `sudo curl -fsSL https://ollama.com/install.sh | sh`
+   * sudo apt install screen
+4. Create a new screen or TMUX and activate a virtual environment via this command:
    * `source .venv/bin/activate`
-4. Run HoneyHTTPD with:
+5. Also within that same screen or TMUX Run HoneyHTTPD with:
    * Python 2 `sudo python2 start.py --config config.json`
    * Python 3 `sudo python3 start.py --config config.json`
-
+6. Detach screen and setup cron jobs:
+   * `Crontab -e` and insert the below, fill in locations accordingly
+   * `0,30 * * * * /usr/bin/python3 /home/<user>/<path_to_project>/summarize_logs.py >> /home/<user>/<path_to_project>/logs/parser_cron.log 2>&1`
+   * `2,32 * * * * /usr/bin/python3 /home/<user>/<path_to_project>/report.py >> /home/<user>/<path_to_project>/logs/report_cron.log 2>&1`
 
 The server will start with the port, logging option, and server handlers defined in config.json.
 
 
-Logs captured from running this server can be found in the logs/ directory locally or https://www.sudo-cheese.org/report.html
+Logs captured from running this server can be found in the logs/ directory locally or find the reports based on the logs at https://www.sudo-cheese.org/report.html
 
 
 ## Open Source Software Used
@@ -71,18 +102,14 @@ https://github.com/bocajspear1/honeyhttpd
    - Output stored as events.jsonl
 
 
-
-
-## Sever and LLM Small explanation maybe
-
-
 ## Technologies and Platforms Used
 
 
 * Python3
 * HoneyHTTPD
-* SEVER AND LLM THINGS HERE
-
+* Ubuntu
+* Ollama
+* Qwen2.5
 
 
 
@@ -95,6 +122,17 @@ openssl req -new -x509 -keyout server_key.pem -out server_cert.pem -days 365 -no
 
 
 From [here](https://gist.github.com/dergachev/7028596).
+
+## Resources
+
+The following are some general documentation to help out customizing the project, get your own server setup, and/or troubleshooting issues.
+   * https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/create-remote-tunnel/
+   * https://docs.ollama.com/quickstart
+   * https://docs.ollama.com/modelfile
+   * https://ubuntu.com/tutorials/install-ubuntu-server#1-overview
+   * https://ollama.com/library/qwen2.5
+   * https://ss64.com/bash/ 
+   * https://ubuntu.com/server/docs/how-to/security/openssh-server/ 
 
 
 ## Contributing
