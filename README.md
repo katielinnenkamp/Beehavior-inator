@@ -43,6 +43,30 @@ To run the current project exactly, the general recommendations is having an ser
 
 If you have batter specs, you can change out the LLM model for one with more computing power. This is what's hosting the current project and thus our bare minimum.
 
+## Ubuntu Server Setup
+
+1. Install Ubuntu and setup SSH (follow along to the ubuntu server setup if need be)
+3. Setup Nginx to act as a reverse proxy
+   *  `sudo apt install nginx`
+   *   Create a default.conf in `/etc/nginx/sites-enabled/`
+   *   The default config will be at the bottom of this section
+   *   `sudo systemctl enable nginx`
+   *   `sudo service nginx restart`
+   
+  ```
+    server {
+        listen 8080;
+        server_name sudo-cheese.org;
+    
+        # Honeypot listener
+        location /honeypot/ {
+            proxy_pass http://localhost:5000/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+```
+
 ## Installation and Setup For Local Running on an Ubuntu Server
 
 
