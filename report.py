@@ -31,6 +31,11 @@ handler = logging.FileHandler(LLM_LOG_FILE)
 handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s"))
 log.addHandler(handler)
 
+#this is for the cron job to actuall get the info
+stream_handler = logging.StreamHandler()
+stream_handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s: %(message)s"))
+log.addHandler(stream_handler)
+
 #Handles open, read, and offset persistence for the JSONL event log
 class LogReader:
     def __init__(self, path):
