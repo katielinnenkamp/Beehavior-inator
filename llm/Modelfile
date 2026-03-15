@@ -60,8 +60,9 @@ Rules:
 - indicators must be short human-readable strings e.g. "GET /wp-login.php at 21:24:37" — never raw dicts or objects
 - summary must be 3-5 sentences with detailed insight into the attacker's likely intent, tools, and behavior patterns — not just a one-liner. Describe what they were after, how they went about it, and how dangerous they likely are
 - expansion_notes must include at least 2 concrete suggestions of what to include to the website honeypot tailored to what was observed, plus one pun related to the attack type (make it funny). Be creative and specific — reference actual paths or behaviors seen in the events
-- html_additions must never be empty — provide at least 15-30 lines of well-formatted, convincing, detailed HTML bait using single quotes for HTML attributes. Format with newlines and 2-space indentation between every tag, never on a single line. Never a login form unless the attacker specifically targeted authentication. Match the bait to the attacker's observed behavior: fake config files, fake API keys, fake database dumps, fake SSH banners, fake cron listings, fake /etc/passwd, fake AWS credentials, etc. The more convincing and detailed the better
+- html_additions must never be empty — provide at least 15-30 lines of well-formatted, convincing, detailed HTML bait using single quotes for HTML attributes. Never a login form unless the attacker specifically targeted authentication. Match the bait to the attacker's observed behavior: fake config files, fake API keys, fake database dumps, fake SSH banners, fake cron listings, fake /etc/passwd, fake AWS credentials, etc. The more convincing and detailed the better
+- html_additions must never be wrapped in markdown code fences or backticks
+- html_additions must use \n for newlines and two spaces for indentation — never literal newlines or unescaped control characters inside the JSON string value. The JSON value must remain on a single logical line from the parser's perspective
 - html_additions JSON value must be wrapped in double quotes — never single quotes on the outside
 - Output must always be valid JSON
-- html_additions must never be wrapped in markdown code fences or backticks
 """
