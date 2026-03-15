@@ -6,7 +6,7 @@ import logging
 import re
 from datetime import datetime, timezone
 from pathlib import Path
-import requests
+import ollama
 
 #all paths
 BASE_DIR = Path(__file__).resolve().parent
@@ -19,12 +19,12 @@ LLM_LOG_FILE = BASE_DIR / "llm/honeybot.log"
 IGNORED_IPS = {"63.155.49.149", "127.0.0.1"} #ignore certain ips, this way it ignores the your own, so shh
 
 #llm setup
-OLLAMA_URL = "http://localhost:11434/api/generate"
 MODEL = "honeybot" #uses qwen with custom prompt and parameters
 MAX_EVENTS = 6
 LLM_TIMEOUT = 600  #in seconds, adjust to longer as need be, same for max events
+CLIENT = ollama.Client(host="http://localhost:11434", timeout=LLM_TIMEOUT)
 
-#log setup 
+#log setup
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 handler = logging.FileHandler(LLM_LOG_FILE)
@@ -70,10 +70,11 @@ class LogReader:
 
         return events
 
-#minimal prompt utilizes modelfile
+#minimal prompt since it utilizes modelfile
 _PROMPT_TEMPLATE = """\
 Analyze the following honeypot events and respond per your instructions. \
 You must respond ONLY with a valid JSON object. No markdown, no headers, no commentary. \
+The JSON objects will be loaded into a template.html page so they need to be valid to be rendered correctly. \
 Start your response with {{ and end with }}.
 
 Events:
@@ -83,17 +84,15 @@ Events:
 #extract, fix the llm output from json if need be
 def extract_and_fix_json(raw: str):
     raw = re.sub(r"```json|```", "", raw).strip()
+
     try:
         return json.loads(raw)
     except json.JSONDecodeError as e:
         log.warning("Initial JSON parse failed (%s), attempting repair...", e)
 
     #extract html_additions value and encodes it safely
-    match = re.search(
-        r'"html_additions"\s*:\s*[\'"](.+?)[\'"](\s*[},])',
-        raw,
-        flags=re.DOTALL
-    )
+    match = re.search(r'"html_additions"\s*:\s*[\'"](.+?)[\'"](\s*[},])', raw, flags=re.DOTALL)
+
     if match:
         safe_value = json.dumps(match.group(1).strip("'"))
         raw = raw[:match.start()] + f'"html_additions": {safe_value}' + match.group(2) + raw[match.end():]
@@ -101,25 +100,21 @@ def extract_and_fix_json(raw: str):
     try:
         return json.loads(raw)
     except json.JSONDecodeError as e:
+        #if repair fails where it's not safe it wont update after failing
         log.error("Repair failed: %s", e)
         raise
 
-
+#sends the events/prompt to the Ollama Model used, refer to Ollama Python docs for more
 def query_llm(events: list[dict]):
     prompt = _PROMPT_TEMPLATE.format(events_json=json.dumps(events, indent=2))
 
     try:
-        resp = requests.post(
-            OLLAMA_URL,
-            json={"model": MODEL, "prompt": prompt, "stream": False, "options": {"temperature": 0.4}},
-            timeout=LLM_TIMEOUT,
-        )
-        resp.raise_for_status()
-        raw = resp.json()["response"]
+        resp = CLIENT.generate(model=MODEL, prompt=prompt)
+        raw = resp.response
         log.info("LLM raw output:\n%s", raw)
         return extract_and_fix_json(raw)
 
-    except (requests.RequestException,json.JSONDecodeError, KeyError) as exc:
+    except ollama.ResponseError as exc:
         log.error("LLM request failed: %s", exc)
 
     return None
@@ -135,7 +130,7 @@ def indicators(group):
         parts.append(f"<li>{html.escape(text)}</li>")
     return "".join(parts)
 
-#compresses all info back together after parsing and analysing
+#compresses all info back together, nothing else is done here besides appending
 def render_ip(grouped: list[dict]):
     return "\n".join(
         f'<div class="ip-block">'
@@ -149,9 +144,9 @@ def render_ip(grouped: list[dict]):
 
 #compiles everything onto the template.html file, better usage than having the llm create files
 def render_report(analysis: dict):
-    """Load the template and substitute all placeholders."""
     template = TEMPLATE_FILE.read_text(encoding="utf-8")
 
+    #help from Claude for rendering json in python
     replacements = {
         "{{TIMESTAMP}}":        datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
         "{{SUMMARY}}":          html.escape(analysis.get("summary", "")),
@@ -165,6 +160,7 @@ def render_report(analysis: dict):
 
     return template
 
+#main function, goes through checking for new events, grabbing 6, calls the LLM, repairs and updates dashboard if possible
 def main():
     reader = LogReader(LOG_FILE)
     start_offset = reader.offset
@@ -184,6 +180,7 @@ def main():
 
     #rotate archive slots 1-24 and will drop oldest
     ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+
     for i in range(23, 0, -1):
         src = ARCHIVE_DIR / f"report_{i:02d}.html"
         if src.exists():
@@ -194,7 +191,7 @@ def main():
     tmp = OUTPUT_FILE.with_suffix(".tmp")
     try:
         tmp.write_text(render_report(analysis), encoding="utf-8")
-        tmp.chmod(0o644)
+        tmp.chmod(0o644) #kept having access denied, so need to make sure to reset the permissions just in case
         tmp.replace(OUTPUT_FILE)
     except Exception:
         tmp.unlink(missing_ok=True)
