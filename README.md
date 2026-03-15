@@ -74,16 +74,22 @@ If you have batter specs, you can change out the LLM model for one with more com
 2. Setup a cloudflared tunnel following 
    * https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/get-started/create-remote-tunnel/
 3. Install dependencies:
-   * Python 2: `sudo pip install -r requirements.txt`
-   * Python 3: `sudo pip3 install -r requirements.txt`
+   * Python 2:
+     * `sudo pip install -r requirements.txt`
+     * `sudo pip install ollama`
+   * Python 3:
+     * `sudo pip3 install -r requirements.txt`
+     * `sudo pip3 install ollama`
    *  `sudo curl -fsSL https://ollama.com/install.sh | sh`
-   * sudo apt install screen
+   * `sudo apt install screen`
 4. Create a new screen or TMUX and activate a virtual environment via this command:
    * `source .venv/bin/activate`
-5. Also within that same screen or TMUX Run HoneyHTTPD with:
+5. Within the llm directory containing the Modelfile:
+   * `ollama create honeybot -f Modelfile`
+7. Also within that same screen or TMUX Run HoneyHTTPD with:
    * Python 2 `sudo python2 start.py --config config.json`
    * Python 3 `sudo python3 start.py --config config.json`
-6. Detach screen and setup cron jobs:
+8. Detach screen and setup cron jobs:
    * `Crontab -e` and insert the below, fill in locations accordingly
    * `0,30 * * * * /usr/bin/python3 /home/<user>/<path_to_project>/summarize_logs.py >> /home/<user>/<path_to_project>/logs/parser_cron.log 2>&1`
    * `2,32 * * * * /usr/bin/python3 /home/<user>/<path_to_project>/report.py >> /home/<user>/<path_to_project>/logs/report_cron.log 2>&1`
